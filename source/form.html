@@ -10,7 +10,7 @@
 
   <header class="main-header">
 
-    <a class="main-header__logo logo" href="">
+    <a class="main-header__logo logo" href="index.html">
       <img class="logo__img" src="img/logo-mobile.svg" width="33" height="37" alt="логотоп сайта 'Кэт энерджи'">
       <span class="logo__text"><b>cat</b> energy</span>
     </a>
@@ -24,13 +24,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item nav-list__item--active">
-            <a href="">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="nav-list__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="nav-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a href="">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -41,112 +41,113 @@
 
   <main class="main-conteiner">
 
-    <h1 class="visually-hidden">Кет энерджи</h1>
+    <h1 class="main-conteiner__title">Подбор программы</h1>
 
-    <section class="hiro-block">
+    <form class="main-form" method="get" action="https://echo.htmlacademy.ru">
 
-      <h2 class="hiro-block__title">Функицональное питание для котов</h2>
-      <span class="hiro-block__text">Занялся собой? Займись котом!</span>
-      <img class="hiro-block__product-img" src="img/product-img-mobile.jpg" alt="маленькая порция cat energy pro">
-      <a class="hiro-block__button button">Подобрать программу</a>
+      <h2 class="visually-hidden">Анкета</h2>
 
-    </section>
+      <fieldset class="main-form__questionnaire questionnaire">
+        <legend class="questionnaire__text">Заполните анкету, и мы подберем
+          программу питания для вашего кота</legend>
+        <ul class="questionnaire__info info-list">
+          <li class="info-list__item">
+            <label>
+              Имя:*
+              <input type="text">
+            </label>
+          </li>
+          <li class="info-list__item">
+            <label>
+              Вес (кг):*
+              <input type="number">
+            </label>
+          </li>
+          <li class="info-list__item">
+            <label>
+              Возраст (лет):
+              <input type="number">
+            </label>
+          </li>
+        </ul>
+        <ul class="questionnaire__radiobutton radiobutton-list">
+          <li class="radiobutton-list__item">
+            <label>Похудение
+              <input class="input-radio" type="radio" name="weight" value="lose-weight" id="lose-weight" checked>
+            </label>
+          </li>
+          <li class="radiobutton-list__item">
+            <label>Набор массы
+              <input class="input-radio" type="radio" name="weight" value="gain-weight" id="gain-weight">
+            </label>
+          </li>
+          <li class="radiobutton-list__item">
+            <label>Не знаю (Нужен ваш совет)
+              <input class="input-radio" type="radio" name="weight" value="need-advice" id="need-advice">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
 
-    <section class="points">
+      <h2 class="visually-hidden">Контакты владельца кота</h2>
 
-      <h2 class="visually-hidden">Цели</h2>
-      <div class="points__item point">
-        <h3 class="point__title">Похудение</h3>
-        <img class="point__icon" src="img/icons/lose-weight.png" alt="">
-        <div class="point__text"></div>
-        <a class="point__catalog" href="catalog.html">каталог slim</a>
-      </div>
+      <fieldset class="main-form__contacts">
+        <legend class="main-form__contacts__text">Контактные данные (владельца кота)</legend>
+        <ul class="main-form__contacts__list client-contacts-list">
+          <li class="client-contacts-list__item">
+            <label>
+              E-mail:*
+              <input type="email">
+            </label>
+          </li>
+          <li class="client-contacts-list__item">
+            <label>
+              Телефон:*
+              <input type="tel">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
 
-      <div class="points__item point">
-        <h3 class="point__title">Набор массы</h3>
-        <img class="point__icon" src="img/icons/gain-weight.png" alt="">
-        <div class="point__text"></div>
-        <a class="point__catalog" href="catalog.html">каталог pro</a>
-      </div>
+      <h2 class="visually-hidden">Комментарий</h2>
 
-    </section>
+      <fieldset class="main-form__comment">
+        <label class="comment-label">
+          Комментарий
+          <textarea class="comment-textarea" id="questionnaire__comment" name="questionnaire__comment"></textarea>
+        </label>
+      </fieldset>
 
-    <section class="description">
+      <fieldset class="main-form__checkbox">
+        <ul class="main-form__checkbox__list checkbox-list">
+          <li class="checkbox-list__item">
+            <label>Сахорозаменитель
+              <input class="input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label>Питьевая вода
+              <input class="input-checkbox" type="checkbox" name="water" id="water">
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label>Молоко
+              <input class="input-checkbox" type="checkbox" name="milk" id="milk">
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label>Витамины
+              <input class="input-checkbox" type="checkbox" name="vitamins" id="vitamins">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
 
-      <h2 class="description__title">Как это работает</h2>
+      <button class="main-form__submit button" type="submit">Отправить форму</button>
 
-      <div class="description__item">
-        <div class="description__item__icon">
-          <img class="img" width="25" height="28" src="img/icons/healfy-nutrients.png" alt="">
-        </div>
-        <div class="description__item__tetx">Функциональное питание
-          содержит только полезные
-          питательные вещества.</div>
-      </div>
+      <div class="main-form__prompt">* — Обязательные поля</div>
 
-      <div class="description__item">
-        <div class="description__item__icon">
-          <img class="img" width="26" height="29" src="img/icons/product-form.png" alt="">
-        </div>
-        <div class="description__item__text">Выпускается в виде порошка,
-          который нужно лишь залить
-          кипятком и готово.</div>
-      </div>
-
-      <div class="description__item">
-        <div class="description__item__icon">
-          <img class="img" width="25" height="30" src="img/icons/meal.png" alt="">
-        </div>
-        <div class="description__item__text">Замените один-два приема
-          обычной еды на наше
-          функциональное питание.</div>
-      </div>
-
-      <div class="description__item">
-        <div class="description__item__icon">
-          <img class="img" width="26" height="31" src="img/icons/clock.png" alt="">
-        </div>
-        <div class="description__item__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</div>
-      </div>
-
-    </section>
-
-    <section class="live-example">
-
-      <h2 class="live-example__title">Живой пример</h2>
-
-      <div class="live-example__achievement achievement">
-
-        <div class="achievement__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.
-        </div>
-
-        <div class="achievement__parametres">
-          <fieldset class="achievement__parametres__weight">
-            <legend>снижение веса</legend>
-            <div>5 кг</div>
-          </fieldset>
-          <fieldset class="achievement__parametres__time">
-            <legend>затрачено времени</legend>
-            <div>60 дней</div>
-          </fieldset>
-        </div>
-
-        <div class="achievement__price">Затраты на питание: 15 000 руб.</div>
-
-      </div>
-
-      <div class="live-example__slider slider">
-        <img class="slider__img-before" src="img/slider-before.jpg" alt="толстый кот">
-        <img class="slider__img-after" src="img/slider-after.jpg" alt="стройный кот">
-        <div class="slider__control">
-          <div class="slider__control__border"></div>
-          <button class="slider__control__buttons" type="button"></button>
-        </div>
-      </div>
-
-    </section>
+    </form>
 
   </main>
 
@@ -224,6 +225,7 @@
     </div>
 
   </footer>
+
 
 </body>
 
