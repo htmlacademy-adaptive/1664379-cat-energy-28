@@ -1,0 +1,41 @@
+.main-header__logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  width: 33px;
+  height: 37px;
+  background-image: url("../../img/logo-mobile.svg");
+}
+
+.logo-2 {
+  width: 101px;
+  height: 19px;
+  background-image: url("../../img/logo-2-mobile.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    width: 174px;
+    height: 52px;
+    background-image: url("../../img/logo-tablet.svg");
+  }
+
+  .logo-2 {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    width: 202px;
+    height: 59px;
+    background-image: url("../../img/logo-desktop.svg");
+  }
+
+  .logo-2 {
+    display: none;
+  }
+}

@@ -3,16 +3,18 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <header class="main-header">
 
-    <a class="main-header__logo logo" href="index.html">
-      <img class="logo__img" src="img/logo-mobile.svg" width="33" height="37" alt="логотоп сайта 'Кэт энерджи'">
-      <span class="logo__text"><b>cat</b> energy</span>
+    <a class="main-header__logo link" href="">
+      <div class="logo"></div>
+      <div class="logo-2"></div>
     </a>
 
     <nav class="main-nav">
@@ -24,13 +26,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item nav-list__item--active">
-            <a href="index.html">Главная</a>
+            <a class="link" href="index.html">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="nav-list__item">
-            <a href="">Подбор программы</a>
+            <a class="link" href="">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -39,38 +41,41 @@
 
   </header>
 
-  <main class="main-conteiner">
+  <main class="form-conteiner">
 
-    <h1 class="main-conteiner__title">Подбор программы</h1>
+    <h1 class="form-conteiner__title">Подбор программы</h1>
 
     <form class="main-form" method="get" action="https://echo.htmlacademy.ru">
 
-      <h2 class="visually-hidden">Анкета</h2>
-
       <fieldset class="main-form__questionnaire questionnaire">
-        <legend class="questionnaire__text">Заполните анкету, и мы подберем
+        <legend class="questionnaire__legend">Заполните анкету, и мы подберем
           программу питания для вашего кота</legend>
         <ul class="questionnaire__info info-list">
           <li class="info-list__item">
-            <label>
+            <label class="form-label">
               Имя:*
-              <input type="text">
+              <input class="field" type="text" placeholder="Барсик">
             </label>
           </li>
           <li class="info-list__item">
-            <label>
+            <label class="form-label">
               Вес (кг):*
-              <input type="number">
+              <input class="field" type="number" placeholder="7">
             </label>
           </li>
           <li class="info-list__item">
-            <label>
+            <label class="form-label">
               Возраст (лет):
-              <input type="number">
+              <input class="field" type="number" placeholder="7">
             </label>
           </li>
         </ul>
-        <ul class="questionnaire__radiobutton radiobutton-list">
+
+      </fieldset>
+
+      <fieldset class="main-form__radiobutton radiobutton">
+        <legend class="visually-hidden">Выбор цели</legend>
+        <ul class="radiobutton-list">
           <li class="radiobutton-list__item">
             <label>Похудение
               <input class="input-radio" type="radio" name="weight" value="lose-weight" id="lose-weight" checked>
@@ -89,37 +94,36 @@
         </ul>
       </fieldset>
 
-      <h2 class="visually-hidden">Контакты владельца кота</h2>
-
-      <fieldset class="main-form__contacts">
-        <legend class="main-form__contacts__text">Контактные данные (владельца кота)</legend>
-        <ul class="main-form__contacts__list client-contacts-list">
+      <fieldset class="main-form__client-contacts client-contacts">
+        <legend class="client-contacts__legend">Контактные данные (владельца кота)</legend>
+        <ul class="client-contacts__list client-contacts-list">
           <li class="client-contacts-list__item">
-            <label>
+            <label class="form-label">
               E-mail:*
-              <input type="email">
+              <input class="field" type="email" placeholder="kuklachev@gmail.com">
             </label>
           </li>
           <li class="client-contacts-list__item">
-            <label>
+            <label class="form-label">
               Телефон:*
-              <input type="tel">
+              <input class="field" type="tel" placeholder="8 (960) 900-60-90">
             </label>
           </li>
         </ul>
       </fieldset>
 
-      <h2 class="visually-hidden">Комментарий</h2>
-
-      <fieldset class="main-form__comment">
-        <label class="comment-label">
+      <fieldset class="main-form__comment comment">
+        <legend class="visually-hidden">Комментарий</legend>
+        <label class="comment__label">
           Комментарий
-          <textarea class="comment-textarea" id="questionnaire__comment" name="questionnaire__comment"></textarea>
+          <textarea class="comment__textarea field" id="questionnaire__comment" name="questionnaire__comment"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
         </label>
       </fieldset>
 
-      <fieldset class="main-form__checkbox">
-        <ul class="main-form__checkbox__list checkbox-list">
+      <fieldset class="main-form__checkbox checkbox">
+        <legend class="checkbox__legend">Дополнительно</legend>
+        <ul class="checkbox__list checkbox-list">
           <li class="checkbox-list__item">
             <label>Сахорозаменитель
               <input class="input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -151,7 +155,8 @@
 
   </main>
 
-  <footer class="footer-conteiner">
+
+  <footer class="footer">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="cooperation">
       <div class="cooperation__title">Приглашаем
@@ -169,7 +174,8 @@
 
     <div class="footer-nav">
 
-      <a class="footer-nav__cat-energy" href="" aria-label="на главную"><b>cat</b> energy</a>
+      <div class="footer-nav__logo" href="">
+      </div>
 
       <h3 class="visually-hidden">Список социальных сетей</h3>
       <ul class="footer-nav__sotial sotial-list">
@@ -209,7 +215,7 @@
 
       </ul>
 
-      <a class="footer-nav__htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="footer-nav__htmlacademy htmlacademy link" href="https://htmlacademy.ru/intensive/adaptive">
 
         <svg class="sotial-logo" width="27" height="35" viewBox="0 0 27 35" fill="none"
           xmlns="http://www.w3.org/2000/svg">
