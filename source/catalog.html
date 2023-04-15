@@ -12,30 +12,49 @@
 
   <header class="main-header">
 
-    <a class="main-header__logo link" href="">
-      <div class="logo"></div>
-      <div class="logo-2"></div>
-    </a>
+    <div class="main-header__logo">
 
-    <nav class="main-nav">
+      <a class="link" href="index.html">
+        <div class="logo"></div>
+      </a>
 
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+      <a class="link" href="index.html">
+        <div class="logo-2"></div>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Открыть меню">
+
+        <svg class="nav-open" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
+          <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
+          <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
+        </svg>
+
+        <svg class="nav-close visually-hidden" width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)"
+            stroke="black" stroke-width="1.5" />
+          <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)"
+            stroke="black" stroke-width="1.5" />
+        </svg>
+
       </button>
 
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item nav-list__item--active">
-            <a class="link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="link" href="">Каталог продукции</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
+    </div>
+
+    <nav class="main-header__nav main-nav ">
+
+      <ul class="main-nav__list nav-list">
+        <li class="nav-list__item nav-list__item--active">
+          <a class="link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="link" href="">Каталог продукции</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
 
     </nav>
 
@@ -207,13 +226,13 @@
 
       </article>
 
-      <article class="basic-goods__card product-card">
+      <article class="basic-goods__card product">
 
-        <a class="product-card__img" href="blank.html">
+        <a class="product__img" href="blank.html">
           <img class="product-img" width="84" height="100" src="img/catalog/chicken.png" alt="большая банка с курицей">
         </a>
 
-        <div class="product-card__desctiption">
+        <div class="product__desctiption">
 
           <a class="product-title link" href="blank.html">Cat Energy PRO 1000 г</a>
 
@@ -252,19 +271,19 @@
     <section class="additional-goods">
       <h2 class="visually-hidden">Дополнительные товары</h2>
       <div class="additional-goods__wrapper">
-        <article class="additional-goods__card">
+        <article class="additional-goods__card additional-product">
           <h3 class="additional-product__title">Сахарозаменитель</h3>
           <div class="additional-product__parameter">1 упаковка (100 г)</div>
           <div class="additional-product__price">200 &#8381;</div>
           <a class="additional-product__button button link" href="blank.html">Заказать</a>
         </article>
-        <article class="additional-goods__card">
+        <article class="additional-goods__card  additional-product">
           <h3 class="additional-product__title">Питьевая вода</h3>
           <div class="additional-product__parameter">5 литров</div>
           <div class="additional-product__price">50 &#8381;</div>
           <a class="additional-product__button button link" href="blank.html">Заказать</a>
         </article>
-        <article class="additional-goods__card">
+        <article class="additional-goods__card  additional-product">
           <h3 class="additional-product__title">Молоко</h3>
           <div class="additional-product__parameter">1 литр</div>
           <div class="additional-product__price">100 &#8381;</div>
@@ -278,8 +297,8 @@
         </article>
       </div>
       <div class="additional-goods__gift">
-        <img class="gift__icon" width="78" height="80" src="img/icons/gift.png" alt="подарочная коробка">
-        <div class="gift__text">Закажите все и получите чехол для кота в подарок!</div>
+        <img class="gift-icon" width="78" height="80" src="img/icons/gift.png" alt="подарочная коробка">
+        <div class="gift-text">Закажите все и получите чехол для кота в подарок!</div>
       </div>
 
     </section>
@@ -293,9 +312,9 @@
       <div class="cooperation__title">Приглашаем
         к сотрудничеству
         дилеров!</div>
-      <div class="cooperation__adress">
+      <adress class="cooperation__adress">
         ул. Большая Конюшенная, д. 19/8 <span class="adress-city">Санкт-Петербург</span>
-      </div>
+        </dadress>
     </div>
 
     <div class="map">
@@ -305,8 +324,8 @@
 
     <div class="footer-nav">
 
-    <div class="footer-nav__logo" href="">
-    </div>
+      <div class="footer-nav__logo" href="">
+      </div>
 
       <h3 class="visually-hidden">Список социальных сетей</h3>
       <ul class="footer-nav__sotial sotial-list">
