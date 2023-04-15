@@ -1,29 +1,28 @@
-.main-header__logo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.logo {
+.logo__img {
+  display: block;
   width: 33px;
   height: 37px;
   background-image: url("../../img/logo-mobile.svg");
 }
 
-.logo-2 {
+.logo__title {
+  display: block;
   width: 101px;
   height: 19px;
+  flex-grow: 1;
   background-image: url("../../img/logo-2-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: @tablet-width) {
-  .logo {
+  .logo__img {
     width: 174px;
     height: 52px;
     background-image: url("../../img/logo-tablet.svg");
   }
 
-  .logo-2 {
+  .logo__title {
     display: none;
   }
 }
