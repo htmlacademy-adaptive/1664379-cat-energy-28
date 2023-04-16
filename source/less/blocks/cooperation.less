@@ -3,3 +3,51 @@
   line-height: 20px;
   text-transform: uppercase;
 }
+
+.cooperation {
+  display: flex;
+  padding: 26px 20px;
+  background-color: #ffffff;
+  justify-content: space-around;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    padding: 56px 60px 56px 80px;
+    width: 425px;
+    height: 86px;
+    align-items: center;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-110%);
+    z-index: 1;
+  }
+}
+
+.cooperation__adress {
+  font-family: "Lato-Regular", "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @spetial-dark-grey-2;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__title {
+    width: min-content;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .cooperation__adress {
+    width: min-content;
+  }
+
+  .adress-city {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}

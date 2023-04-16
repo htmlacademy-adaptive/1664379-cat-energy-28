@@ -19,7 +19,7 @@
 
     </div>
 
-    <nav class="main-header__nav main-nav ">
+    <nav class="main-header__nav main-nav visually-hidden">
 
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
 
@@ -120,7 +120,7 @@
           <div class="description__text">Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.</div>
-            <div class="description__number">2</div>
+          <div class="description__number">2</div>
         </div>
 
         <div class="description__item">
@@ -130,7 +130,7 @@
           <div class="description__text">Замените один-два приема
             обычной еды на наше
             функциональное питание.</div>
-            <div class="description__number">3</div>
+          <div class="description__number">3</div>
         </div>
 
         <div class="description__item">
@@ -146,38 +146,54 @@
     </section>
 
     <section class="live-example">
+      <div class="live-example__wrapper">
+        <h2 class="live-example__title">Живой пример</h2>
 
-      <h2 class="live-example__title">Живой пример</h2>
+        <div class="live-example__achievement achievement">
 
-      <div class="live-example__achievement achievement">
+          <div class="achievement__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по
+            16 часов в день.
+          </div>
 
-        <div class="achievement__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.
+          <div class="achievement__parameter">
+            <fieldset class="achievement__weight">
+              <legend class="achievement__title">снижение веса</legend>
+              <div class="achievement__value">5 кг</div>
+            </fieldset>
+            <fieldset class="achievement__time">
+              <legend class="achievement__title">затрачено времени</legend>
+              <div class="achievement__value">60 дней</div>
+            </fieldset>
+          </div>
+
+          <div class="achievement__price">Затраты&nbsp;на&nbsp;питание: <span class="achievement__price-value">15 000
+              руб.</span>
+          </div>
+
         </div>
 
-        <div class="achievement__parameter">
-          <fieldset class="parameter-weight">
-            <legend class="parameter-title">снижение веса</legend>
-            <div class="parameter-value">5 кг</div>
-          </fieldset>
-          <fieldset class="parameter-time">
-            <legend class="parameter-title">затрачено времени</legend>
-            <div class="parameter-value">60 дней</div>
-          </fieldset>
+        <div class="live-example__slider slider">
+          <div class="slider__before">
+            <img class="slider__img-before" width="280" height="256" src="img/slider-before.png" alt="толстый кот">
+          </div>
+          <div class="slider__after">
+            <img class="slider__img-after" width="280" height="256" src="img/slider-after.png" alt="стройный кот">
+          </div>
+          <div class="slider__control">
+
+            <svg class="slider__control-icon" width="40" height="258" viewBox="0 0 40 258" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" width="4" height="256" rx="2" />
+              <rect x="1" y="110" width="38" height="38" rx="19" fill="white" />
+              <path d="M16 120L8 129L16 138V120Z" />
+              <path d="M32 129L24 120V138L32 129Z" />
+              <rect x="1" y="110" width="38" height="38" rx="19" stroke="none" stroke-width="2" fill="none" />
+            </svg>
+
+          </div>
         </div>
 
-        <div class="achievement__price">Затраты на питание: 15 000 руб.</div>
-
-      </div>
-
-      <div class="live-example__slider slider">
-        <img class="slider__img-before" src="img/slider-before.jpg" alt="толстый кот">
-        <img class="slider__img-after" src="img/slider-after.jpg" alt="стройный кот">
-        <div class="slider__control">
-          <div class="slider__control__border"></div>
-          <button class="slider__control__buttons" type="button"></button>
-        </div>
       </div>
 
     </section>
@@ -188,23 +204,32 @@
 
     <h2 class="visually-hidden">Как нас найти</h2>
 
-    <div class="cooperation">
+    <div class="footer__cooperation cooperation">
       <div class="cooperation__title">Приглашаем
         к сотрудничеству
         дилеров!</div>
       <div class="cooperation__adress">
-        ул. Большая Конюшенная, д. 19/8 <span class="adress-city">Санкт-Петербург</span>
+        ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="adress-city">Санкт-Петербург</span>
       </div>
     </div>
 
-    <div class="map">
-      <div class="map__holder"></div>
-      <div class="map__pointer"></div>
+    <div class="footer__map map">
+
+      <div class="map__holder">
+        <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728572!2d30.320472477103195!3d59.93871647491517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1681676008959!5m2!1sru!2sge" width="2880" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="map__pointer">
+        <img class="map__pointer-icon" src="img/icons/map-pointer.png" alt="">
+      </div>
     </div>
 
-    <div class="footer-nav">
+    <div class="footer__nav footer-nav">
 
-      <div class="footer-nav__logo"></div>
+      <div class="footer-nav__logo">
+        <img class="footer-nav__logo-img" src="img/logo-2-mobile.svg" alt="логотип сайта">
+      </div>
 
       <h3 class="visually-hidden">Список социальных сетей</h3>
 
@@ -245,16 +270,16 @@
 
       </ul>
 
-      <a class="footer-nav__htmlacademy htmlacademy link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="footer-nav__htmlacademy link" href="https://htmlacademy.ru/intensive/adaptive">
 
-        <svg class="sotial-logo" width="27" height="35" viewBox="0 0 27 35" fill="none"
+        <div class="footer-nav__htmlacademy-title">HTML&nbsp;Academy</div>
+
+        <svg class="footer-nav__htmlacademy-logo" width="27" height="35" viewBox="0 0 27 35" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z"
             fill="#666666" />
         </svg>
-
-        <div class="htmlacademy__text">HTML Academy</div>
 
       </a>
 
