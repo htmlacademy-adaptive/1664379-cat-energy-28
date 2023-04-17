@@ -19,17 +19,21 @@
 
     </div>
 
-    <nav class="main-header__nav main-nav visually-hidden">
+    <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+      <button class="main-nav__toggle main-nav__toggle--open main-nav--nojs" type="button" aria-label="Открыть меню">
 
-        <svg class="nav-open" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
           <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
           <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
         </svg>
 
-        <svg class="nav-close visually-hidden" width="20" height="20" viewBox="0 0 20 20" fill="none"
+      </button>
+
+      <button class="main-nav__toggle main-nav__toggle--close main-nav--nojs" type="button" aria-label="Закрыть меню">
+
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)"
             stroke="black" stroke-width="1.5" />
@@ -39,16 +43,18 @@
 
       </button>
 
-      <ul class="main-nav__list nav-list">
-        <li class="nav-list__item nav-list__item--active">
+      <ul class="main-nav__list main-nav--nojs">
+
+        <li class="main-nav__item main-nav__item--active">
           <a class="link" href="">Главная</a>
         </li>
-        <li class="nav-list__item">
+        <li class="main-nav__item">
           <a class="link" href="catalog.html">Каталог продукции</a>
         </li>
-        <li class="nav-list__item">
+        <li class="main-nav__item">
           <a class="link" href="form.html">Подбор программы</a>
         </li>
+
       </ul>
 
     </nav>
@@ -286,6 +292,43 @@
     </div>
 
   </footer>
+
+
+  <script>
+    let navList = document.querySelector(".main-nav__list");
+    console.log(navList);
+    let buttonClose = document.querySelector(".main-nav__toggle--close");
+    console.log(buttonClose);
+    let buttonOpen = document.querySelector(".main-nav__toggle--open");
+    console.log(buttonOpen);
+
+   // navList.classList.remove('main-nav--nojs');
+   // buttonClose.classList.remove('main-nav--nojs');
+   // buttonOpen.classList.remove('main-nav--nojs');
+
+    buttonOpen.addEventListener('click', function () {
+      if (navList.classList.contains('main-nav--nojs')) {
+        return
+      } else {
+        navList.classList.add('main-nav--nojs');
+        buttonOpen.classList.add('main-nav--nojs');
+        buttonClose.classList.add('main-nav--nojs');
+      }
+    });
+
+
+    buttonClose.addEventListener('click', function () {
+      if (navList.classList.contains('main-nav--nojs')) {
+        navList.classList.remove('main-nav--nojs');
+        buttonOpen.classList.remove('main-nav--nojs');
+        buttonClose.classList.remove('main-nav--nojs');
+      } else {
+        return
+      }
+    });
+
+
+  </script>
 
 </body>
 
