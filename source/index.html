@@ -75,7 +75,7 @@
         <span class="hiro-block-text">Занялся собой? Займись котом!</span>
       </div>
       <div class="hiro-block__img">
-        <img class="hiro-block-img" width="280" height="270" src="img/product-img-mobile-@1.png"
+        <img class="hiro-block-img" width="280" height="" src="img/product-img-mobile-@1.png"
           alt="маленькая порция cat energy pro">
       </div>
       <a class="hiro-block-button button">Подобрать программу</a>
@@ -210,7 +210,7 @@
 
     <h2 class="visually-hidden">Как нас найти</h2>
 
-    <div class="footer__cooperation cooperation">
+    <div class="footer__cooperation cooperation cooperation--index">
       <div class="cooperation__title">Приглашаем
         к сотрудничеству
         дилеров!</div>
@@ -302,9 +302,10 @@
     let buttonOpen = document.querySelector(".main-nav__toggle--open");
     console.log(buttonOpen);
 
-   // navList.classList.remove('main-nav--nojs');
-   // buttonClose.classList.remove('main-nav--nojs');
-   // buttonOpen.classList.remove('main-nav--nojs');
+   navList.classList.remove('main-nav--nojs');
+   buttonClose.classList.remove('main-nav--nojs');
+   buttonOpen.classList.remove('main-nav--nojs');
+   navList.classList.add('main-nav--js');
 
     buttonOpen.addEventListener('click', function () {
       if (navList.classList.contains('main-nav--nojs')) {
@@ -316,7 +317,6 @@
       }
     });
 
-
     buttonClose.addEventListener('click', function () {
       if (navList.classList.contains('main-nav--nojs')) {
         navList.classList.remove('main-nav--nojs');
@@ -326,7 +326,6 @@
         return
       }
     });
-
 
   </script>
 

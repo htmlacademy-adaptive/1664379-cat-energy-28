@@ -104,11 +104,12 @@
   border: none;
   cursor: pointer;
   z-index: 3;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
 }
+
+.main-nav__list.main-nav--js {
+  position: absolute;
+}
+
 /* КНОПКА ОТКРЫТЬ*/
 
 .main-nav__toggle--open.main-nav--nojs {
@@ -117,12 +118,20 @@
 
 .main-nav__toggle--open {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 /* КНОПКА ЗАКРЫТЬ*/
 
 .main-nav__toggle--close.main-nav--nojs {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__toggle--close {
