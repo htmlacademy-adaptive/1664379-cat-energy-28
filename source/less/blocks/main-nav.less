@@ -10,7 +10,6 @@
 
 /*СТИЛИ СПИСКА МЕНЮ ПО УМОЛЧАНИЮ*/
 
-
 .main-nav__list,
 .main-nav__list.main-nav--nojs {
   position: static;
@@ -19,6 +18,7 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
+  margin-top: -1px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -46,16 +46,23 @@
     line-height: 30px;
     padding-right: 0;
     background-color: transparent;
-    color: #ffffff;
     z-index: 1;
     padding-left: 110px;
     width: 500px;
   }
 }
 
-@media (max-width: @mobil-width-only) {
-  .main-nav__list {
-    display: none;
+@media (min-width: @desktop-width) {
+  .main-nav__list--index {
+    color: #ffffff;
+  }
+}
+
+.main-nav__list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
@@ -108,6 +115,11 @@
 
 .main-nav__list.main-nav--js {
   position: absolute;
+
+
+  @media (min-width: @desktop-width) {
+    top: -50px;
+  }
 }
 
 /* КНОПКА ОТКРЫТЬ*/

@@ -11,6 +11,15 @@
     padding-right: 30px;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding-left: calc((100% - 1220px) / 2);
+    padding-right: calc((100% - 1220px) / 2);
+    justify-content: space-between;
+  }
 }
 
 .basic-goods__header {
