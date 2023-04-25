@@ -17,10 +17,20 @@
   @media (min-width: @tablet-width) {
     text-align: end;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    text-align: left;
+  }
 }
 
 .additional-product__price {
   text-align: end;
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    width: 100px;
+  }
 }
 
 .additional-product__button {
@@ -28,6 +38,10 @@
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }
 
 .additional-product__gift-text {
@@ -39,11 +53,20 @@
   width: 160px;
   text-align: center;
   color: #ffffff;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
     top: 52%;
     right: 25%;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }
 
@@ -55,6 +78,9 @@
   @media (min-width: @desktop-width) {
     padding-left: calc((100% - 1220px) / 2);
     padding-right: calc((100% - 1220px) / 2);
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
   }
 }
 
@@ -79,6 +105,8 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
@@ -107,6 +135,7 @@
     background-color: @basic-green;
   }
 }
+
 @media (min-width: @desktop-width) {
   .additional-product__header::before {
     right: calc(100% - ((100% - 1220px) / 2) + 40px);
@@ -125,6 +154,13 @@
     border: 1px solid hsl(0, 0%, 90%);
     padding: 26px 38px 28px 38px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 15px 0 15px 0;
+  }
 }
 
 .additional-product__title {
@@ -138,53 +174,46 @@
     font-size: 20px;
     text-align: start;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 310px;
+  }
+}
+
+/*новый код*/
+@media (min-width: @tablet-width) {
+  .additional-product__wrapper {
+    margin-bottom: 85px;
+  }
 }
 
 .additional-product__gift {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 35px;
+  display: grid;
+  width: 100%;
+  overflow: hidden;
+  height: 290px;
+  margin-bottom: 35px;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 69px;
-    width: 100%;
-  }
-}
-
-.additional-product__gift::after {
-  content: url("../img/icons/gift.png");
-  position: absolute;
-  top: 99px;
-  width: 78px;
-  height: 80px;
-
-  @media (min-width: @tablet-width) {
-    top: 50%;
-    left: 15%;
-  }
-}
-
-.additional-product__gift-img {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    overflow: hidden;
     height: 200px;
-    width: auto;
+    margin-bottom: 76px;
+    margin-top: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    width: 245px;
+    height: 290px;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    align-content: center;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .gift-img {
-    object-fit: fill;
-    margin-top: -320px;
-    min-width: 100%;
-  }
-}
-
-.additional-product__gift-img::before {
+.additional-product__gift::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -193,16 +222,48 @@
   opacity: 85%;
 }
 
-/*НОВЫЙ КОД*/
+.additional-product__gift::after {
+  content: url("../img/icons/gift.png");
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
 
-@media (min-width: @tablet-width) {
-  .additional-product__gift {
-    display: grid;
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    left: 15%;
   }
 
-  .gift-img {
-    position: relative;
-    top: -15%;
-    z-index: -1;
+  @media (min-width: @desktop-width) {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.gift-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: calc(-50% + 100px);
+  }
+
+  @media (min-width: @desktop-width) {
+
+    height: 100%;
+    min-width: auto;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
