@@ -1,30 +1,46 @@
-.form-conteiner__title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-}
-
-.questionnaire,
-.radiobutton,
-.client-contacts-list,
-.checkbox-list {
+.questionnaire {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
 }
 
 .questionnaire__legend {
+  color: @spetial-dark-grey-2;
+  font-size: 14px;
+  line-height: 18px;
+  padding-right: 50px;
+}
+
+.questionnaire__info-list {
+  .list-item-style ();
+
+  padding: 14px 20px 13px 20px;
+}
+
+.questionnaire__info-item {
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
+}
+
+.questionnaire__info-label {
+  color: @spetial-dark-grey;
+  padding-right: 13px;
+}
+
+
+.questionnaire__info-field {
+  font-family: inherit;
+  text-transform: uppercase;
   font-size: 16px;
+  padding: 14px 15px 13px 15px;
+  border: 1px solid @spetial-grey;
+  flex-grow: 1;
 }
 
-.client-contacts__legend,
-.comment__label,
-.checkbox__legend {
-  font-size: 24px;
-  line-height: 26px;
-}
-
-.main-form__prompt {
-  font-family: "Lato-Regular", "Oswald", sans-serif;
-  line-height: 16px;
+.questionnaire__info-field::placeholder {
+  color: @spetial-dark-grey;
 }

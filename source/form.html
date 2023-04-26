@@ -14,8 +14,8 @@
 
     <div class="main-header__logo logo">
 
-      <a class="logo__img link" href=""></a>
-      <a class="logo__title link" href=""></a>
+      <a class="logo__img link" href="index.html"></a>
+      <a class="logo__title link" href="index.html"></a>
 
     </div>
 
@@ -70,24 +70,23 @@
       <fieldset class="main-form__questionnaire questionnaire">
         <legend class="questionnaire__legend">Заполните анкету, и мы подберем
           программу питания для вашего кота</legend>
-        <ul class="questionnaire__info info-list">
-          <li class="info-list__item">
-            <label class="form-label">
-              Имя:*
-              <input class="field" type="text" placeholder="Барсик">
-            </label>
+
+        <ul class="questionnaire__info-list">
+
+          <li class="questionnaire__info-item">
+            <label class="questionnaire__info-label" for="name">Имя:*</label>
+            <input class="questionnaire__info-field" type="text" id="name" placeholder="Барсик">
+
           </li>
-          <li class="info-list__item">
-            <label class="form-label">
-              Вес (кг):*
-              <input class="field" type="number" placeholder="7">
-            </label>
+
+          <li class="questionnaire__info-item">
+            <label class="questionnaire__info-label" for="weight">Вес (кг):*</label>
+            <input class="questionnaire__info-field" type="number" id="weight" placeholder="7">
           </li>
-          <li class="info-list__item">
-            <label class="form-label">
-              Возраст (лет):
-              <input class="field" type="number" placeholder="7">
-            </label>
+
+          <li class="questionnaire__info-item">
+            <label class="questionnaire__info-label" for="ages">Возраст (лет):</label>
+            <input class="questionnaire__info-field" type="number" id="ages" placeholder="7">
           </li>
         </ul>
 
