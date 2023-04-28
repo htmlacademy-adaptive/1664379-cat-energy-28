@@ -1,10 +1,73 @@
-.checkbox-list {
+.checkbox {
+  padding: 40px 20px 0 20px;
+  border: none;
+}
+
+.checkbox__list {
+  .list-item-style ();
   font-size: 14px;
   line-height: 18px;
+  padding-left: 47px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .checkbox__legend {
+  position: relative;
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: 500px) {
+    width: max-content;
+  }
+}
+
+.checkbox__legend::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 160px;
+  width: 100vw;
+  height: 2px;
+  background-color: @basic-green;
+}
+
+.checkbox__item {
+  padding-bottom: 25px;
+}
+
+.checkbox__control {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @spetial-grey;
+  left: -45px;
+  top: -7px;
+}
+
+/*СОСТОЯНИЯ */
+.checkbox__control:hover .checkbox__mark {
+  border-color: red;
+}
+
+.checkbox__input:disabled + .checkbox__mark {
+  background-color: green;
+}
+
+.checkbox__input:checked + .checkbox__mark::after {
+  content: url("../img/icons/checked.svg");
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 9px;
+  left: 7px;
+}
+
+.checkbox__control:active .checkbox__mark {
+  border-color: red;
 }

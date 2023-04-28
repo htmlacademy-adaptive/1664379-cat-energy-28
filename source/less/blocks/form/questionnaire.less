@@ -5,6 +5,11 @@
   padding-left: 20px;
   padding-right: 20px;
   border: none;
+  @media (min-width: 500px) {
+
+    padding-left: 70px;
+  padding-right: 70px;
+  }
 }
 
 .questionnaire__legend {
@@ -12,35 +17,38 @@
   font-size: 14px;
   line-height: 18px;
   padding-right: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 300px;
+    font-size: 20px;
+    line-height: 30px;
+
+  }
 }
 
-.questionnaire__info-list {
+.questionnaire__list {
   .list-item-style ();
 
-  padding: 14px 20px 13px 20px;
+  padding: 14px 0 13px 0;
 }
 
-.questionnaire__info-item {
+.questionnaire__item {
   display: flex;
   align-items: center;
   padding-top: 14px;
 }
 
-.questionnaire__info-label {
+.questionnaire__label {
   color: @spetial-dark-grey;
   padding-right: 13px;
 }
 
 
-.questionnaire__info-field {
-  font-family: inherit;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 14px 15px 13px 15px;
-  border: 1px solid @spetial-grey;
+.questionnaire__field {
+  .input-field ();
   flex-grow: 1;
 }
 
-.questionnaire__info-field::placeholder {
+.questionnaire__field::placeholder {
   color: @spetial-dark-grey;
 }
