@@ -21,7 +21,6 @@
   }
 }
 
-
 .radiobutton__list {
   .list-item-style ();
   padding-left: 45px;
@@ -53,7 +52,6 @@
   }
 }
 
-
 .radiobutton__control {
   position: relative;
   cursor: pointer;
@@ -65,10 +63,11 @@
   height: 30px;
   border: 1px solid @spetial-grey;
   border-radius: 50%;
-  left: -62px;
+  left: -42px;
   top: -7px;
 
   @media (min-width: @tablet-width) {
+    left: -62px;
     width: 40px;
     height: 40px;
   }
@@ -76,14 +75,14 @@
 
 /*СОСТОЯНИЯ */
 .radiobutton__control:hover .radiobutton__mark {
-  border-color: red;
+  border-color: #ff0000;
 }
 
-.radiobutton__input:disabled+.radiobutton__mark {
-  background-color: green;
+.radiobutton__input:disabled + .radiobutton__mark {
+  background-color: #008000;
 }
 
-.radiobutton__input:checked+.radiobutton__mark::after {
+.radiobutton__input:checked + .radiobutton__mark::after {
   content: "";
   position: absolute;
   width: 13px;

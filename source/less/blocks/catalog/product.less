@@ -1,5 +1,4 @@
-.product__title,
-.product--add__title {
+.product__title {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -11,7 +10,7 @@
 }
 
 .product__characteristics,
-.product--add__text {
+.product__text {
   font-family: "Lato-Regular", "Oswald", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -23,7 +22,7 @@
 }
 
 .product__order-button,
-.product--add__button {
+.product__button {
   .product-card-button();
 }
 
@@ -96,7 +95,6 @@
   }
 }
 
-
 .product__table-value {
   text-align: end;
 }
@@ -135,12 +133,11 @@
   }
 }
 
-.product--add__button {
+.product__button {
   width: 100%;
-
 }
 
-.product--add__title {
+.product--add .product__title {
   padding-top: 23px;
   padding-bottom: 13px;
 
@@ -149,13 +146,14 @@
     padding-right: 55px;
     text-align: center;
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 15px;
     padding-right: 15px;
-     }
+  }
 }
 
-.product--add__text {
+.product__text {
   padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
@@ -163,13 +161,14 @@
     padding: 23px 40px 0 40px;
     text-align: center;
   }
+
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
-     }
+  }
 }
 
-.product--add__icon {
+.product__icon {
   @media (min-width: @tablet-width) {
     margin-top: 52px;
     margin-bottom: 49px;
@@ -192,7 +191,6 @@
   }
 }
 
- /*ДЛЯ ДЕСКТОПА*/
 @media (min-width: @desktop-width) {
   .product__title {
     padding-left: 10px;

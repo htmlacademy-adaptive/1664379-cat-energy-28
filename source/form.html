@@ -33,8 +33,7 @@
 
       <button class="main-nav__toggle main-nav__toggle--close main-nav--nojs" type="button" aria-label="Закрыть меню">
 
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)"
             stroke="black" stroke-width="1.5" />
           <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)"
@@ -48,9 +47,11 @@
         <li class="main-nav__item main-nav__item--active">
           <a class="link" href="index.html">Главная</a>
         </li>
+
         <li class="main-nav__item">
           <a class="link" href="catalog.html">Каталог продукции</a>
         </li>
+        
         <li class="main-nav__item">
           <a class="link" href="">Подбор программы</a>
         </li>
@@ -75,7 +76,6 @@
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="name">Имя:*</label>
             <input class="questionnaire__field" type="text" id="name" placeholder="Барсик">
-
           </li>
 
           <li class="questionnaire__item">
@@ -87,90 +87,117 @@
             <label class="questionnaire__label" for="ages">Возраст (лет):</label>
             <input class="questionnaire__field" type="number" id="ages" placeholder="7">
           </li>
+
         </ul>
 
       </fieldset>
 
       <fieldset class="main-form__radiobutton radiobutton">
         <legend class="radiobutton__legend visually-hidden">Выбор цели</legend>
+
         <ul class="radiobutton__list">
+
           <li class="radiobutton__item">
             <label class="radiobutton__control" tabindex="1">
-              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="lose-weight" id="lose-weight"  checked>
-              <div class="radiobutton__mark"></div>
-              <div class="radiobutton__title">Похудение</div>
+              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="lose-weight"
+                id="lose-weight" checked>
+              <span class="radiobutton__mark"></span>
+              <span class="radiobutton__title">Похудение</span>
             </label>
           </li>
+
           <li class="radiobutton__item">
             <label class="radiobutton__control" tabindex="1">
-              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="gain-weight" id="gain-weight" checked>
-              <div class="radiobutton__mark"></div>
-              <div class="radiobutton__title">Набор массы</div>
+              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="gain-weight"
+                id="gain-weight" checked>
+              <span class="radiobutton__mark"></span>
+              <span class="radiobutton__title">Набор массы</span>
             </label>
           </li>
+
           <li class="radiobutton__item">
             <label class="radiobutton__control" tabindex="1">
-              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="need-advice" id="need-advice">
-              <div class="radiobutton__mark"></div>
-              <div class="radiobutton__title">Не знаю (Нужен ваш совет)</div>
+              <input class="radiobutton__input visually-hidden" type="radio" name="weight" value="need-advice"
+                id="need-advice">
+              <span class="radiobutton__mark"></span>
+              <span class="radiobutton__title">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
+
         </ul>
+
       </fieldset>
 
       <fieldset class="main-form__client-contacts client-contacts">
+
         <legend class="client-contacts__legend">Контактные&nbsp;данные (владельца&nbsp;кота)</legend>
+
         <ul class="client-contacts__list">
+
           <li class="client-contacts__item">
             <label class="client-contacts__label" for="email">E-mail:*</label>
             <input class="client-contacts__field" type="email" placeholder="kuklachev@gmail.com" id="email">
           </li>
+
           <li class="client-contacts__item">
             <label class="client-contacts__label" for="phone">Телефон:*</label>
             <input class="client-contacts__field" type="tel" placeholder="8 (960) 900-60-90" id="phone">
           </li>
+
         </ul>
+
       </fieldset>
 
       <fieldset class="main-form__comment comment">
+
         <legend class="comment__legend">Комментарий</legend>
+
         <label class="comment__label visually-hidden" for="comment">Комментарий</label>
-        <textarea class="comment__textarea" id="questionnaire__comment" name="questionnaire__comment"
-            placeholder="Расскажите обо всех повадках кота" id="comment"></textarea>
+        <textarea class="comment__textarea" name="questionnaire__comment"
+          placeholder="Расскажите обо всех повадках кота" id="comment"></textarea>
+
       </fieldset>
 
       <fieldset class="main-form__checkbox checkbox">
+
         <legend class="checkbox__legend">Дополнительно</legend>
+
         <ul class="checkbox__list">
+
           <li class="checkbox__item">
             <label class="checkbox__control" tabindex="1">
               <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-              <div class="checkbox__mark"></div>
-              <div class="checkbox__title">Сахорозаменитель</div>
+              <span class="checkbox__mark"></span>
+              <span class="checkbox__title">Сахорозаменитель</span>
             </label>
           </li>
+
           <li class="checkbox__item">
             <label class="checkbox__control" tabindex="1">
               <input class="checkbox__input visually-hidden" type="checkbox" name="water" id="water">
-              <div class="checkbox__mark"></div>
-              <div class="checkbox__title">Питьевая вода</div>
+              <span class="checkbox__mark"></span>
+              <span class="checkbox__title">Питьевая вода</span>
             </label>
           </li>
+
           <li class="checkbox__item">
             <label class="checkbox__control" tabindex="1">
               <input class="checkbox__input visually-hidden" type="checkbox" name="milk" id="milk">
-              <div class="checkbox__mark"></div>
-              <div class="checkbox__title">Молоко</div>
+              <span class="checkbox__mark"></span>
+              <span class="checkbox__title">Молоко</span>
             </label>
           </li>
+
           <li class="checkbox__item">
             <label class="checkbox__control" tabindex="1">
               <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-              <div class="checkbox__mark"></div>
-              <div class="checkbox__title">Витамины</div>
+              <span class="checkbox__mark"></span>
+              <span class="checkbox__title">Витамины</span>
             </label>
           </li>
+
         </ul>
+
       </fieldset>
 
       <button class="main-form__submit button" type="submit">Отправить форму</button>
