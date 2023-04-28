@@ -1,6 +1,16 @@
 .checkbox {
   padding: 40px 20px 0 20px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .checkbox__list {
@@ -10,6 +20,35 @@
   padding-left: 47px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.checkbox__item {
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.checkbox__title {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
 
 .checkbox__legend {
@@ -20,20 +59,42 @@
   @media (min-width: 500px) {
     width: max-content;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .checkbox__legend::after {
   content: "";
   position: absolute;
   top: 13px;
-  left: 160px;
+  left: 180px;
   width: 100vw;
   height: 2px;
   background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    left: 260px;
+  }
 }
 
-.checkbox__item {
-  padding-bottom: 25px;
+@media (min-width: @tablet-width) {
+  .checkbox__legend::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+  }
 }
 
 .checkbox__control {
@@ -48,6 +109,12 @@
   border: 1px solid @spetial-grey;
   left: -45px;
   top: -7px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -55px;
+  }
 }
 
 /*СОСТОЯНИЯ */
@@ -60,12 +127,20 @@
 }
 
 .checkbox__input:checked + .checkbox__mark::after {
-  content: url("../img/icons/checked.svg");
+  content: url("../img/icons/checked-mobile.svg");
   position: absolute;
   width: 18px;
   height: 14px;
   top: 9px;
   left: 7px;
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/icons/checked-tablet.svg");
+    width: 26px;
+    height: 19px;
+    top: 9px;
+    left: 7px;
+  }
 }
 
 .checkbox__control:active .checkbox__mark {

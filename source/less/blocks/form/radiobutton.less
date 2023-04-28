@@ -9,11 +9,15 @@
   padding-left: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: 0;
+    padding-left: 0;
     border-top: none;
+    font-size: 20px;
+    line-height: 27px;
+  }
 
-
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -23,9 +27,18 @@
   padding-left: 45px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 65px;
+    padding-left: 89px;
     border: 1px solid @spetial-grey;
+  }
 
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    padding-left: 88px;
+    min-height: 200px;
   }
 }
 
@@ -38,8 +51,6 @@
   .radiobutton__item:first-child {
     padding-top: 20px;
   }
-
-
 }
 
 
@@ -54,8 +65,13 @@
   height: 30px;
   border: 1px solid @spetial-grey;
   border-radius: 50%;
-  left: -45px;
+  left: -62px;
   top: -7px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /*СОСТОЯНИЯ */
@@ -76,4 +92,11 @@
   background-color: @basic-green;
   top: 9px;
   left: 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 12px;
+    left: 12px;
+  }
 }

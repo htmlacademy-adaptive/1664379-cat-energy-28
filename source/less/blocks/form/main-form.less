@@ -1,6 +1,43 @@
-.main-form__prompt {
+.main-form {
+  position: relative;
+  padding-bottom: 69px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: end;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.main-form::after {
+  content: "* — Обязательные поля";
+  position: absolute;
   font-family: "Lato-Regular", "Oswald", sans-serif;
+  font-size: 14px;
   line-height: 16px;
+  width: 200px;
+  height: 16px;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    bottom: 85px;
+    left: 510px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 860px;
+  }
 }
 
 .main-form__submit {
@@ -8,13 +45,13 @@
   margin-left: 20px;
   margin-right: 20px;
   border: none;
-}
 
-.main-form__promt {
-  font-family: "Lato-Regular", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  padding-top: 21px;
-  padding-bottom: 32px;
-  text-align: center;
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: 282px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 586px;
+  }
 }
