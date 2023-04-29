@@ -21,7 +21,7 @@
 
     <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle main-nav__toggle--open main-nav--nojs" type="button" aria-label="Открыть меню">
+      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button" aria-label="Открыть меню">
 
         <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
@@ -31,7 +31,7 @@
 
       </button>
 
-      <button class="main-nav__toggle main-nav__toggle--close main-nav--nojs" type="button" aria-label="Закрыть меню">
+      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button" aria-label="Закрыть меню">
 
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)"
@@ -42,7 +42,7 @@
 
       </button>
 
-      <ul class="main-nav__list main-nav--nojs main-nav__list--index">
+      <ul class="main-nav__list main-nav__list--nojs main-nav__list--index">
 
         <li class="main-nav__item main-nav__item--active">
           <a class="link" href="">Главная</a>
@@ -292,7 +292,7 @@
       <div class="map__pointer">
         <img class="map__pointer-icon" src="img/icons/map-pointer.png" alt="">
       </div>
-      
+
     </div>
 
     <div class="footer__nav footer-nav">
@@ -357,7 +357,6 @@
 
   </footer>
 
-
   <script>
     let navList = document.querySelector(".main-nav__list");
     console.log(navList);
@@ -366,26 +365,26 @@
     let buttonOpen = document.querySelector(".main-nav__toggle--open");
     console.log(buttonOpen);
 
-    navList.classList.remove('main-nav--nojs');
-    buttonClose.classList.remove('main-nav--nojs');
-    buttonOpen.classList.remove('main-nav--nojs');
-    navList.classList.add('main-nav--js');
+    navList.classList.remove('main-nav__list--nojs');
+    buttonClose.classList.remove('main-nav__toggle--nojs');
+    buttonOpen.classList.remove('main-nav__toggle--nojs');
+    navList.classList.add('main-nav__list--js');
 
     buttonOpen.addEventListener('click', function () {
-      if (navList.classList.contains('main-nav--nojs')) {
+      if (navList.classList.contains('main-nav__list--nojs')) {
         return
       } else {
-        navList.classList.add('main-nav--nojs');
-        buttonOpen.classList.add('main-nav--nojs');
-        buttonClose.classList.add('main-nav--nojs');
+        navList.classList.add('main-nav__list--nojs');
+        buttonOpen.classList.add('main-nav__toggle--nojs');
+        buttonClose.classList.add('main-nav__toggle--nojs');
       }
     });
 
     buttonClose.addEventListener('click', function () {
-      if (navList.classList.contains('main-nav--nojs')) {
-        navList.classList.remove('main-nav--nojs');
-        buttonOpen.classList.remove('main-nav--nojs');
-        buttonClose.classList.remove('main-nav--nojs');
+      if (navList.classList.contains('main-nav__list--nojs')) {
+        navList.classList.remove('main-nav__toggle--nojs');
+        buttonOpen.classList.remove('main-nav__toggle--nojs');
+        buttonClose.classList.remove('main-nav__toggle--nojs');
       } else {
         return
       }
