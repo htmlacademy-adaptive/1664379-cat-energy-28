@@ -1,4 +1,4 @@
-.radiobutton {
+.program-options {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -21,7 +21,7 @@
   }
 }
 
-.radiobutton__list {
+.program-options__list {
   .list-item-style ();
   padding-left: 45px;
 
@@ -41,23 +41,23 @@
   }
 }
 
-.radiobutton__item {
+.program-options__item {
   color: @spetial-dark-grey-2;
   padding-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
-  .radiobutton__item:first-child {
+  .program-options__item:first-child {
     padding-top: 20px;
   }
 }
 
-.radiobutton__control {
+.program-options__control {
   position: relative;
   cursor: pointer;
 }
 
-.radiobutton__mark {
+.program-options__mark {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -74,15 +74,15 @@
 }
 
 /*СОСТОЯНИЯ */
-.radiobutton__control:hover .radiobutton__mark {
+.program-options__control:hover .program-options__mark {
   border-color: #ff0000;
 }
 
-.radiobutton__input:disabled + .radiobutton__mark {
+.program-options__input:disabled + .program-options__mark {
   background-color: #008000;
 }
 
-.radiobutton__input:checked + .radiobutton__mark::after {
+.program-options__input:checked + .program-options__mark::after {
   content: "";
   position: absolute;
   width: 13px;

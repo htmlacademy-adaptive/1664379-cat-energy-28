@@ -1,4 +1,4 @@
-.checkbox {
+.product-choice {
   padding: 40px 20px 0 20px;
   border: none;
 
@@ -13,7 +13,7 @@
   }
 }
 
-.checkbox__list {
+.product-choice__list {
   .list-item-style ();
   font-size: 14px;
   line-height: 18px;
@@ -32,7 +32,7 @@
   }
 }
 
-.checkbox__item {
+.product-choice__item {
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
@@ -44,14 +44,14 @@
   }
 }
 
-.checkbox__title {
+.product-choice__title {
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 27px;
   }
 }
 
-.checkbox__legend {
+.product-choice__legend {
   position: relative;
   font-size: 24px;
   line-height: 26px;
@@ -66,7 +66,7 @@
   }
 }
 
-.checkbox__legend::after {
+.product-choice__legend::after {
   content: "";
   position: absolute;
   top: 13px;
@@ -82,7 +82,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .checkbox__legend::before {
+  .product-choice__legend::before {
     content: "";
     position: absolute;
     top: 45%;
@@ -97,12 +97,12 @@
   }
 }
 
-.checkbox__control {
+.product-choice__control {
   position: relative;
   cursor: pointer;
 }
 
-.checkbox__mark {
+.product-choice__mark {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -118,7 +118,7 @@
 }
 
 /*СОСТОЯНИЯ */
-.checkbox__control:hover .checkbox__mark {
+.product-choice__control:hover .product-choice__mark {
   border-color: #ff0000;
 }
 
@@ -126,7 +126,7 @@
   background-color: #008000;
 }
 
-.checkbox__input:checked + .checkbox__mark::after {
+.product-choice__input:checked + .product-choice__mark::after {
   content: url("../img/icons/checked.svg");
   position: absolute;
   width: 18px;
@@ -143,6 +143,6 @@
   }
 }
 
-.checkbox__control:active .checkbox__mark {
+.product-choice__control:active .product-choice__mark {
   border-color: #ff0000;
 }
