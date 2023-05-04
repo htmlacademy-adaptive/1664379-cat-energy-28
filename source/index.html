@@ -14,8 +14,8 @@
 
     <div class="main-header__logo logo">
 
-      <a class="logo__img link" href=""></a>
-      <a class="logo__title link" href=""></a>
+      <a class="logo__img link"></a>
+      <a class="logo__title link"></a>
 
     </div>
 
@@ -45,7 +45,7 @@
       <ul class="main-nav__list main-nav__list--nojs main-nav__list--index">
 
         <li class="main-nav__item main-nav__item--active">
-          <a class="link" href="">Главная</a>
+          <a class="link">Главная</a>
         </li>
 
         <li class="main-nav__item">
@@ -90,7 +90,7 @@
 
       </div>
 
-      <a class="hiro-block-button button">Подобрать программу</a>
+      <a class="hiro-block-button button link" href="form.html">Подобрать программу</a>
 
     </section>
 
@@ -283,13 +283,13 @@
 
         <iframe class="map__google"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728572!2d30.320472477103195!3d59.93871647491517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sge!4v1681676008959!5m2!1sru!2sge"
-          width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy"
+          width="320" height="400" style="border: 0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
 
       </div>
 
-      <img class="map__pointer" src="img/icons/map-pointer.png" alt="">
+      <img class="map__pointer" width="57" height="53" src="img/icons/map-pointer.png" alt="">
 
     </div>
 
@@ -378,7 +378,7 @@
 
     buttonClose.addEventListener('click', function () {
       if (navList.classList.contains('main-nav__list--nojs')) {
-        navList.classList.remove('main-nav__toggle--nojs');
+        navList.classList.remove('main-nav__list--nojs');
         buttonOpen.classList.remove('main-nav__toggle--nojs');
         buttonClose.classList.remove('main-nav__toggle--nojs');
       } else {
