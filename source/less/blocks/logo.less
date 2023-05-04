@@ -6,21 +6,14 @@
   align-items: center;
 }
 
-.logo__img {
-  display: block;
-  width: 33px;
-  height: 37px;
-  background-image: url("../img/logo-mobile.svg");
+.logo__text-holder {
+  flex-grow: 1;
 }
 
-.logo__title {
+.logo__text {
   display: block;
-  width: 101px;
-  height: 19px;
-  flex-grow: 1;
-  background-image: url("../img/logo-2-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,7 +23,7 @@
     background-image: url("../img/logo-tablet.svg");
   }
 
-  .logo__title {
+  .logo__text {
     display: none;
   }
 }
@@ -42,7 +35,4 @@
     background-image: url("../img/logo-desktop.svg");
   }
 
-  .logo__title {
-    display: none;
-  }
 }
