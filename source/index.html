@@ -4,11 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Кэт энерджи</title>
+  <title>CAT Energy</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
 </head>
 
 <body class="page__body">
+
+  <svg style="display: none;">
+
+    <symbol viewBox="0 0 24 18" fill="none" id="open-menu">
+      <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
+      <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
+      <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
+    </symbol>
+
+  </svg>
 
   <header class="main-header">
 
@@ -21,17 +34,24 @@
 
     <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button" aria-label="Открыть меню">
+      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"
+        aria-label="Открыть меню">
 
-        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <svg class="user-list__login-icon" width="24" height="18">
+          <use xlink:href="#open-menu"></use>
+        </svg>
+<!--        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5" />
           <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5" />
           <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5" />
         </svg>
+      -->
 
       </button>
 
-      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button" aria-label="Закрыть меню">
+      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button"
+        aria-label="Закрыть меню">
 
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)"
@@ -73,7 +93,8 @@
       </div>
 
       <div class="hiro-block__content">
-        <h2 class="hiro-block-title">Функицональное <br class="br-tablet">питание <span class="not-wrap-text">для котов</span></h2>
+        <h2 class="hiro-block-title">Функицональное <br class="br-tablet">питание <span class="not-wrap-text">для
+            котов</span></h2>
         <span class="hiro-block-text">Занялся собой? Займись котом!</span>
       </div>
 
@@ -210,7 +231,8 @@
 
           </div>
 
-          <div class="achievement__price"><span class="not-wrap-text">Затраты на питание:</span> <span class="achievement__price-value">15 000
+          <div class="achievement__price"><span class="not-wrap-text">Затраты на питание:</span> <span
+              class="achievement__price-value">15 000
               руб.</span>
           </div>
 
@@ -276,7 +298,8 @@
       </div>
 
       <address class="footer__cooperation-address">
-      <span class="not-wrap-text">ул. Большая</span> <span class="not-wrap-text">Конюшенная, д. 19/8</span> <span class="footer__cooperation-address-city">Санкт&#8209;Петербург</span>
+        <span class="not-wrap-text">ул. Большая</span> <span class="not-wrap-text">Конюшенная, д. 19/8</span> <span
+          class="footer__cooperation-address-city">Санкт&#8209;Петербург</span>
       </address>
 
     </div>
