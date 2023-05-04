@@ -1,0 +1,13 @@
+.additional-goods {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+
+  @media (min-width: @desktop-width) {
+    padding-left: calc((100% - 1220px) / 2);
+    padding-right: calc((100% - 1220px) / 2);
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
+}

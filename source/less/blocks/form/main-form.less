@@ -1,26 +1,57 @@
+.main-form {
+  position: relative;
+  padding-bottom: 69px;
 
-.questionnaire__legend,
-.radiobutton-list__item {
-  color: @spetial-dark-grey-2;
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: end;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
-.form-label {
-  color: @spetial-dark-grey;
+.main-form::after {
+  content: "* — Обязательные поля";
+  position: absolute;
+  font-family: "Lato-Regular", "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  width: 200px;
+  height: 16px;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    bottom: 85px;
+    left: 510px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 860px;
+  }
 }
 
-.field {
-  font-family: inherit;
-  text-transform: uppercase;
-  font-size: 16px;
-  padding: 14px 15px 13px 15px;
-  border: 1px solid @spetial-grey;
-}
+.main-form__submit {
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
 
-.info-list .field {
-  padding: 14px 20px 13px 20px;
-}
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    width: 282px;
+  }
 
-.field::placeholder {
-  color: @spetial-dark-grey;
+  @media (min-width: @desktop-width) {
+    width: 586px;
+  }
 }
-
