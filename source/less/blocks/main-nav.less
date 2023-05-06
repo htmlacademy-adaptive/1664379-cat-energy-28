@@ -41,14 +41,13 @@
   }
 
   @media (min-width: @desktop-width) {
-
     font-size: 20px;
     line-height: 30px;
-    padding-right: 0;
+    width: 480px;
     background-color: transparent;
+    padding-left: 130px;
+    padding-right: 0;
     z-index: 1;
-    padding-left: 110px;
-    width: 500px;
   }
 }
 
@@ -77,10 +76,15 @@
   border-bottom: 1px solid hsl(0, 0%, 90%);
 
   @media (min-width: @tablet-width) {
-    height: 52px;
+    height: 45px;
+    padding-top: 7px;
     border-bottom: none;
     align-items: center;
     width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 37px;
   }
 }
 

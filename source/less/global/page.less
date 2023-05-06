@@ -17,6 +17,13 @@
   align-content: start;
 }
 
+
+@media (min-width: @tablet-width) {
+  .br-mobile {
+    display: none;
+  }
+}
+
 .br-tablet {
   display: none;
 
@@ -25,6 +32,13 @@
   }
 }
 
+.br-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
 .not-wrap-text {
   white-space: nowrap;
 }

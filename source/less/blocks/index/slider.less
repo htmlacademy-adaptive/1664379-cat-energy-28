@@ -10,6 +10,17 @@
   @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
+    margin-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-top: 55px;
+    padding-bottom: 86px;
   }
 }
 
@@ -74,4 +85,13 @@
 .slider__control:hover .slider__arrows-fill {
   stroke: @basic-green;
   fill: @basic-green;
+}
+
+
+.slider__img-before {
+  margin-left: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }
