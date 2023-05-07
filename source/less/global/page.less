@@ -17,13 +17,6 @@
   align-content: start;
 }
 
-
-@media (min-width: @tablet-width) {
-  .br-mobile {
-    display: none;
-  }
-}
-
 .br-tablet {
   display: none;
 
@@ -39,6 +32,15 @@
     display: inline;
   }
 }
+
+.br-mobile {
+  display: inline;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .not-wrap-text {
   white-space: nowrap;
 }

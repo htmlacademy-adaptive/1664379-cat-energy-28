@@ -9,6 +9,14 @@
 }
 
 /*СТИЛИ СПИСКА МЕНЮ ПО УМОЛЧАНИЮ*/
+.main-nav__list.main-nav__list--js {
+  position: absolute;
+
+
+  @media (min-width: @desktop-width) {
+    top: -56px;
+  }
+}
 
 .main-nav__list,
 .main-nav__list.main-nav__list--nojs {
@@ -24,7 +32,7 @@
   font-weight: 500;
   text-transform: uppercase;
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 5;
   border-top: 1px solid hsl(0, 0%, 90%);
 
   .list-item-style ();
@@ -47,7 +55,6 @@
     background-color: transparent;
     padding-left: 130px;
     padding-right: 0;
-    z-index: 1;
   }
 }
 
@@ -76,15 +83,11 @@
   border-bottom: 1px solid hsl(0, 0%, 90%);
 
   @media (min-width: @tablet-width) {
-    height: 45px;
-    padding-top: 7px;
+    height: 38px;
+    padding-top: 12px;
     border-bottom: none;
     align-items: center;
     width: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 37px;
   }
 }
 
@@ -92,7 +95,9 @@
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid @basic-green;
   }
+}
 
+.main-nav__item--active-index {
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid #ffffff;
   }
@@ -115,15 +120,6 @@
   border: none;
   cursor: pointer;
   z-index: 3;
-}
-
-.main-nav__list.main-nav__list--js {
-  position: absolute;
-
-
-  @media (min-width: @desktop-width) {
-    top: -50px;
-  }
 }
 
 /* КНОПКА ОТКРЫТЬ*/

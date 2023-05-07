@@ -5,6 +5,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 70px;
     padding-right: 70px;
+    padding-bottom: 74px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,6 +15,7 @@
     align-items: end;
     padding-left: 110px;
     padding-right: 110px;
+    padding-bottom: 82px;
   }
 }
 
@@ -25,22 +27,26 @@
   width: 200px;
   height: 16px;
   bottom: 32px;
-  left: 50%;
+  left: 56%;
   transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    bottom: 85px;
-    left: 510px;
+    bottom: 90px;
+    left: 518px;
   }
 
   @media (min-width: @desktop-width) {
+    bottom: 90px;
     left: 860px;
   }
 }
 
 .main-form__submit {
+  font-size: 16px;
+  line-height: 20px;
   width: calc(100% - 40px);
+  margin-top: 17px;
   margin-left: 20px;
   margin-right: 20px;
   border: none;
@@ -48,9 +54,28 @@
   @media (min-width: @tablet-width) {
     margin-left: 0;
     width: 282px;
+    height: 52px;
+    font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 586px;
+    width: 568px;
+    margin: 0;
+  }
+}
+
+.main-form__programs {
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
