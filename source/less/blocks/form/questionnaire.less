@@ -16,13 +16,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
     padding: 0;
     height: 322px;
   }
 }
 
 .questionnaire__legend {
-  color: @spetial-dark-grey-2;
+  color: @special-dark-grey-2;
   font-size: 14px;
   line-height: 18px;
   margin-top: 10px;
@@ -54,6 +55,7 @@
   @media (min-width: @desktop-width) {
     height: 200px;
     margin-top: -20px;
+    width: 100%;
   }
 }
 
@@ -67,13 +69,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 20px;
+    padding-top: 23px;
   }
 }
 
 .questionnaire__label {
   font-size: 16px;
-  color: @spetial-dark-grey;
+  color: @special-dark-grey;
   padding-right: 14px;
   width: max-content;
 
@@ -94,6 +96,14 @@
   }
 }
 
+.questionnaire__field:hover {
+  outline: 1px solid @special-grey;
+}
+
+.questionnaire__field:focus {
+  outline: 1px solid @special-dark-grey;
+}
+
 .questionnaire__field::placeholder {
-  color: @spetial-dark-grey;
+  color: @special-dark-grey;
 }

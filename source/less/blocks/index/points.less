@@ -25,13 +25,14 @@
 }
 
 .points__item {
+  position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 50px 1fr 57px;
   column-gap: 20px;
   align-items: center;
   background-color: @basic-grey;
-  height: 242px;
+  min-height: 242px;
   padding-left: 22px;
   padding-right: 20px;
   padding-top: 23px;
@@ -181,6 +182,18 @@
   }
 }
 
+@media (max-width: @mobil-width-only) {
+  .points__item::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: hsl(0, 0%, 62%);
+    left: 20px;
+    bottom: 54px;
+  }
+}
+
 .points__catalog::after {
   content: url("../img/icons/point-catalog-arrow.svg");
   width: 33px;
@@ -200,6 +213,10 @@
   opacity: 0.3;
 }
 
+.points__catalog:hover {
+  opacity: 30%;
+}
+
 .points__text {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -207,8 +224,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  max-height: 135px;
+  min-height: 135px;
   overflow: hidden;
+  padding-top: 22px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column-start: 1;
@@ -217,6 +235,7 @@
     grid-row-end: 3;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {

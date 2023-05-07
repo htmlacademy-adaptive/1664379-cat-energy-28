@@ -134,7 +134,7 @@
   position: absolute;
   width: 28px;
   height: 28px;
-  border: 1px solid @spetial-grey;
+  border: 1px solid @special-grey-input;
   left: -49px;
   top: -4px;
 
@@ -153,11 +153,16 @@
 
 /*СОСТОЯНИЯ */
 .product-choice__control:hover .product-choice__mark {
-  border-color: #ff0000;
+  border-color: @special-grey;
+}
+
+.product-choice__control:focus .product-choice__mark {
+  border-color: transparent;
+  outline: @special-dark-grey;
 }
 
 .checkbox__input:disabled + .checkbox__mark {
-  background-color: #008000;
+  background-color: hsl(0, 0%, 90%);
 }
 
 .product-choice__input:checked + .product-choice__mark::after {
@@ -180,5 +185,5 @@
 }
 
 .product-choice__control:active .product-choice__mark {
-  border-color: #ff0000;
+  border-color: @special-dark-grey;
 }

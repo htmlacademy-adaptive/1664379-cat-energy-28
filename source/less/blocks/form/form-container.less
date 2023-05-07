@@ -1,5 +1,4 @@
 .form-container {
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid hsl(0, 0%, 90%);
@@ -31,5 +30,9 @@
     margin-top: 74px;
     margin-bottom: 57px;
     padding-left: 110px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: calc((100% - 1440px) / 2 + 110px);
   }
 }

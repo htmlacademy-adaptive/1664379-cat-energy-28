@@ -1,6 +1,9 @@
 .main-form {
   position: relative;
   padding-bottom: 69px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     padding-left: 70px;
@@ -13,8 +16,8 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     align-items: end;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-right: calc((100% - 1220px) / 2);
+    padding-left: calc((100% - 1220px) / 2);
     padding-bottom: 82px;
   }
 }
@@ -37,8 +40,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 90px;
-    left: 860px;
+    bottom: 105px;
+    left: calc((100% - 1440px) / 2 + 860px);
   }
 }
 
