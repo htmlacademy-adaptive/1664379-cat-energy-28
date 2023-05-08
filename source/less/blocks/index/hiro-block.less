@@ -4,11 +4,11 @@
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr min-content;
   font-weight: 400;
-  height: 480px;
   color: #ffffff;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    height: 873px;
+    height: 790px;
     padding-left: 120px;
     padding-top: 64px;
     padding-right: 30px;
@@ -32,6 +32,7 @@
   line-height: 36px;
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -40,6 +41,10 @@
     width: max-content;
     text-align: start;
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -7px;
   }
 }
 
@@ -54,41 +59,56 @@
     line-height: 20px;
     color: #000000;
     flex-grow: 0;
-    margin-top: auto;
+    margin-top: 40px;
     margin-bottom: auto;
   }
 }
 
 .hiro-block__background-holder {
+  position: relative;
   grid-row-start: 1;
   grid-row-end: -1;
   grid-column-start: 1;
   grid-column-end: 2;
-  display: flex;
-  justify-content: center;
   height: 302px;
-  background-color: rgba(104, 183, 56, 0.85);
-  overflow: hidden;
+  background-image: url("../img/hiro-block-background-@1.jpg");
+  background-size: max(580px, 100%);
+  background-position: 63% 51%;
+  background-repeat: no-repeat;
 
-  @media (min-width: @tablet-width) {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hiro-block-background-@2.jpg");
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     display: none;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: start;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
     height: auto;
+    background-position: 0 0;
+    background-size: cover;
   }
 }
 
-.background-img {
-  z-index: -1;
-  object-fit: cover;
+.hiro-block__background-holder::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 302px;
+  background-color: @basic-green;
+  opacity: 85%;
+
+  @media (min-width: @desktop-width) {
+    height: 696px;
+  }
 }
+
+/*конец кода*/
 
 .hiro-block__content {
   position: relative;
@@ -113,6 +133,7 @@
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
+    height: 225px;
     padding-top: 231px;
     padding-left: calc(100% - 530px);
     z-index: 2;
@@ -131,11 +152,12 @@
   width: 280px;
   height: 270px;
   margin: auto;
+  margin-top: 33px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: -23px;
+    left: 43%;
     transform: translateX(-50%);
     z-index: -1;
     width: 709px;
@@ -143,13 +165,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    top: 141px;
-    left: 50%;
+    top: 2px;
+    left: 48%;
     transform: translateX(-30%);
     z-index: 1;
   }
@@ -161,6 +182,8 @@
   grid-column-start: 1;
   grid-column-end: 2;
   margin: auto;
+  width: calc(100% - 40px);
+
 
   @media (min-width: @tablet-width) {
     grid-row-start: 2;

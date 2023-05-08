@@ -1,4 +1,5 @@
 .questionnaire {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -15,33 +16,46 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
     padding: 0;
+    height: 322px;
   }
 }
 
 .questionnaire__legend {
-  color: @spetial-dark-grey-2;
+  color: @special-dark-grey-2;
   font-size: 14px;
   line-height: 18px;
-  padding-right: 50px;
+  margin-top: 10px;
   max-width: 226px;
+  padding-left: 0;
 
   @media (min-width: @tablet-width) {
-    padding-right: 300px;
+    margin-top: 0;
+    margin-bottom: 40px;
     font-size: 20px;
     line-height: 30px;
     max-width: 323px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 64px;
   }
 }
 
 .questionnaire__list {
   .list-item-style ();
-
-  padding: 14px 0 13px 0;
+  margin-top: 20px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 200px;
+    margin-top: -20px;
+    width: 100%;
   }
 }
 
@@ -50,28 +64,46 @@
   align-items: center;
   padding-top: 14px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-top: 20px;
+    padding-top: 23px;
   }
 }
 
 .questionnaire__label {
-  color: @spetial-dark-grey;
-  padding-right: 13px;
+  font-size: 16px;
+  color: @special-dark-grey;
+  padding-right: 14px;
+  width: max-content;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 
 .questionnaire__field {
   .input-field ();
   flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.questionnaire__field:hover {
+  outline: 1px solid @special-grey;
+}
+
+.questionnaire__field:focus {
+  outline: 1px solid @special-dark-grey;
 }
 
 .questionnaire__field::placeholder {
-  color: @spetial-dark-grey;
-
-  @media (min-width: @tablet-width) {
-
-    font-size: 20px;
-    line-height: 27px;
-  }
+  color: @special-dark-grey;
 }

@@ -4,30 +4,32 @@
   text-transform: uppercase;
   margin: 0;
   border: none;
-  border-top: 1px solid @spetial-grey;
-  padding-top: 28px;
-  padding-left: 20px;
+  border-top: 1px solid @special-grey;
+
 
   @media (min-width: @tablet-width) {
-    padding-right: 0;
-    padding-left: 0;
+
     border-top: none;
     font-size: 20px;
     line-height: 27px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    height: 200px;
+    padding-top: 122px;
   }
 }
 
 .program-options__list {
   .list-item-style ();
+  margin: 0;
   padding-left: 45px;
 
   @media (min-width: @tablet-width) {
     padding-left: 89px;
-    border: 1px solid @spetial-grey;
+    border: 1px solid @special-grey;
+    padding-top: 12px;
+    padding-bottom: 6px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,13 +44,19 @@
 }
 
 .program-options__item {
-  color: @spetial-dark-grey-2;
+  color: @special-dark-grey-2;
   padding-bottom: 25px;
 }
 
-@media (min-width: @tablet-width) {
-  .program-options__item:first-child {
+
+.program-options__item:first-child {
+  @media (min-width: @tablet-width) {
     padding-top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 22px;
   }
 }
 
@@ -61,9 +69,9 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  border: 1px solid @spetial-grey;
+  border: 1px solid @special-grey-input;
   border-radius: 50%;
-  left: -42px;
+  left: -46px;
   top: -7px;
 
   @media (min-width: @tablet-width) {
@@ -75,7 +83,15 @@
 
 /*СОСТОЯНИЯ */
 .program-options__control:hover .program-options__mark {
-  border-color: #ff0000;
+  border-color: @special-grey;
+}
+
+.program-options__input:focus + .program-options__mark {
+  border-color: @special-dark-grey;
+}
+
+.program-options__input:active + .program-options__mark {
+  border-color: @special-dark-grey;
 }
 
 .program-options__input:disabled + .program-options__mark {
@@ -95,7 +111,11 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    top: 12px;
-    left: 12px;
+    top: 11px;
+    left: 11px;
   }
+}
+
+.program-options__input:checked.program-options__input:hover + .program-options__mark::after {
+  background-color: @basic-green-hover;
 }

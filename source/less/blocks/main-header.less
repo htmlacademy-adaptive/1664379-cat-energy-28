@@ -21,22 +21,32 @@
     align-items: flex-end;
     height: 112px;
     padding: 0;
+    margin: auto;
   }
 }
 
 .main-header__logo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   height: 65px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
   padding-left: 20px;
   padding-right: 44px;
 
   @media (min-width: @tablet-width) {
-    height: 52px;
     max-width: 174px;
+    border-bottom: none;
+    height: 52px;
     padding-left: 0;
     padding-right: 95px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: max-content;
+    height: 56px;
   }
 }

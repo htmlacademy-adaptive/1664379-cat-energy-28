@@ -7,7 +7,8 @@
   padding-right: 20px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,16 +25,17 @@
 }
 
 .points__item {
+  position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 50px 1fr 57px;
   column-gap: 20px;
   align-items: center;
   background-color: @basic-grey;
-  height: 242px;
-  padding-left: 20px;
+  min-height: 242px;
+  padding-left: 22px;
   padding-right: 20px;
-  padding-top: 24px;
+  padding-top: 23px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
@@ -46,15 +48,17 @@
     padding-right: 62px;
     padding-top: 77px;
     padding-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 100px 1fr 82px;
+    grid-template-rows: 125px 1fr 86px;
     column-gap: 62px;
-    height: 327px;
+    height: 340px;
     padding-left: 52px;
-    padding-top: 47px;
+    padding-right: 62px;
+    padding-top: 30px;
   }
 }
 
@@ -72,16 +76,17 @@
     grid-row-end: 4;
     width: 200px;
     height: 200px;
+    margin-top: 15px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100px;
     height: 100px;
+    margin-top: 3px;
   }
 }
 
-.points__icon--lose-weight::after {
-  content: url("../img/icons/lose-weight-mobile.png");
+.points__lose-weight {
   position: absolute;
   width: 36px;
   height: 50px;
@@ -90,20 +95,19 @@
   transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    content: url("../img/icons/lose-weight-tablet.png");
     width: 140px;
     height: 194px;
+    top: 43%;
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../img/icons/lose-weight-desktop.png");
     width: 70px;
     height: 97px;
+    top: 43%;
   }
 }
 
-.points__icon--gain-weight::after {
-  content: url("../img/icons/gain-weight-mobile.png");
+.points__gain-weight {
   position: absolute;
   width: 67px;
   height: 28px;
@@ -112,24 +116,25 @@
   transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    content: url("../img/icons/gain-weight-tablet.png");
     width: 268px;
     height: 112px;
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../img/icons/gain-weight-desktop.png");
     width: 134px;
     height: 56px;
+    top: 47%;
   }
 }
 
 .points__title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    font-size: 36px;
+    line-height: 36px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -137,8 +142,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 
@@ -150,15 +155,17 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: auto;
-  }
-
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: auto;
     font-size: 20px;
     line-height: 30px;
   }
@@ -175,11 +182,27 @@
   }
 }
 
+@media (max-width: @mobil-width-only) {
+  .points__item::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: hsl(0, 0%, 62%);
+    left: 20px;
+    bottom: 54px;
+  }
+}
+
 .points__catalog::after {
   content: url("../img/icons/point-catalog-arrow.svg");
   width: 33px;
   height: 10px;
   padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 27px;
+  }
 }
 
 .points__catalog:hover::after {
@@ -190,6 +213,10 @@
   opacity: 0.3;
 }
 
+.points__catalog:hover {
+  opacity: 30%;
+}
+
 .points__text {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -197,16 +224,18 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  max-height: 135px;
+  min-height: 135px;
   overflow: hidden;
+  padding-top: 22px;
 
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {

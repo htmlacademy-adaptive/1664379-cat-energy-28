@@ -25,6 +25,22 @@
   }
 }
 
+.br-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.br-mobile {
+  display: inline;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .not-wrap-text {
   white-space: nowrap;
 }
