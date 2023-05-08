@@ -65,7 +65,7 @@
 }
 
 /*хиро блок. фоновая картнка в коде html*/
-
+/*
 .hiro-block__background-holder {
   grid-row-start: 1;
   grid-row-end: -1;
@@ -96,18 +96,20 @@
   z-index: -1;
   position: relative;
 }
-
+*/
 /*новый код хиро-блок фоновая картинка в css*/
-/*
+
 .hiro-block__background-holder {
+  position: relative;
   grid-row-start: 1;
   grid-row-end: -1;
   grid-column-start: 1;
   grid-column-end: 2;
   height: 302px;
   background-image: url("../img/hiro-block-background-@1.jpg");
-  background-size: cover;
-  background-position: 69% 15%;
+  background-size: max(580px, 100%);
+  background-position: 63% 51%;
+  background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hiro-block-background-@2.jpg");
@@ -124,6 +126,7 @@
     grid-row-end: 3;
     height: auto;
     background-position: 0 0;
+    background-size: cover;
   }
 }
 
@@ -139,7 +142,7 @@
     height: 696px;
   }
 }
-*/
+
 /*конец кода*/
 
 .hiro-block__content {
