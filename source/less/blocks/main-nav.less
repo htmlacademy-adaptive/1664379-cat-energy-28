@@ -9,6 +9,10 @@
 }
 
 /*СТИЛИ СПИСКА МЕНЮ ПО УМОЛЧАНИЮ*/
+.main-nav__list.main-nav__list--nojs {
+  position: static;
+}
+
 .main-nav__list.main-nav__list--js {
   position: absolute;
 
@@ -19,7 +23,7 @@
 
 .main-nav__list,
 .main-nav__list.main-nav__list--nojs {
-  position: static;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
