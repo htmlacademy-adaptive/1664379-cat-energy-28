@@ -21,16 +21,16 @@
 }
 
 .footer-nav__logo {
-  width: 153px;
-  height: 27px;
+  width: 128px;
+  height: 24px;
   padding-top: 37px;
-  padding-bottom: 13px;
-  padding-left: 15px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    width: 162px;
-    height: 37px;
+    width: 144px;
+    height: 35px;
+    padding-right: 20px;
   }
 }
 
@@ -52,18 +52,29 @@
   padding-top: 20px;
   padding-bottom: 40px;
   justify-content: space-between;
+  color: @special-dark-grey;
 
   @media (min-width: @tablet-width) {
     width: max-content;
     padding: 0;
     gap: 27px;
   }
+  /*СТЕК*/
+  &::after {
+    content: "";
+    width: 27px;
+    height: 34px;
+    mask: url("../img/icons/stek.svg#htmlacademy-logo");
+    background-color: #666666;
+  }
 }
 
-.footer-nav__html-logo {
-  fill: #ff0000;
+.footer-nav__htmlacademy:hover {
+  &::after {
+    background-color: @basic-green;
+  }
 }
 
-.html-logo:hover .footer-nav__html-logo {
-  fill: rgb(81, 0, 255);
+.footer-nav__htmlacademy:active {
+  opacity: 30%;
 }

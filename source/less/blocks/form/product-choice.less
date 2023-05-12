@@ -1,5 +1,5 @@
 .product-choice {
-  padding: 62px 20px 0 20px;
+  padding: 41px 20px 0 20px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -24,14 +24,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 113px;
     padding-left: 60px;
-    column-gap: 107px;
+    padding-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 0;
-    /*width: 1145px;*/
     padding-bottom: 67px;
   }
 }
@@ -40,7 +40,8 @@
   padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 42px;
+    padding-top: 21px;
+    padding-bottom: 23px;
   }
 
   @media (min-width: @desktop-width) {
@@ -86,7 +87,7 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 67px;
+    padding-top: 41px;
   }
 
   @media (min-width: @desktop-width) {
@@ -141,8 +142,8 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    left: -64px;
-    top: -14px;
+    left: -61px;
+    top: -12px;
   }
 
   @media (min-width: @desktop-width) {
@@ -156,9 +157,13 @@
   border-color: @special-grey;
 }
 
-.product-choice__control:focus .product-choice__mark {
-  border-color: transparent;
-  outline: @special-dark-grey;
+.product-choice__input:focus + .product-choice__mark {
+  border-color: @special-dark-grey;
+}
+
+
+.product-choice__input:active + .product-choice__mark {
+  border-color: @special-dark-grey;
 }
 
 .checkbox__input:disabled + .checkbox__mark {
@@ -172,7 +177,7 @@
   height: 14px;
   top: 6px;
   left: 5px;
-  background-image: url("../img/icons/checked.svg");
+  background-image: url("../img/checked.svg");
   background-size: 100%;
 
   @media (min-width: @tablet-width) {
@@ -182,8 +187,4 @@
     top: 9px;
     left: 7px;
   }
-}
-
-.product-choice__control:active .product-choice__mark {
-  border-color: @special-dark-grey;
 }

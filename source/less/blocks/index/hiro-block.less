@@ -80,18 +80,19 @@
     background-image: url("../img/hiro-block-background-@2.jpg");
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
     height: auto;
     background-position: 0 0;
-    background-size: cover;
+    background-size: 1050px;
   }
 }
 
