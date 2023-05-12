@@ -173,12 +173,13 @@
 .product-choice__input:checked + .product-choice__mark::after {
   content: "";
   position: absolute;
+  display: block;
   width: 18px;
   height: 14px;
   top: 6px;
   left: 5px;
-  background-image: url("../img/checked.svg");
-  background-size: 100%;
+  mask: url("../img/icons/stek.svg#checked");
+  background-color: @basic-green;
 
   @media (min-width: @tablet-width) {
 
