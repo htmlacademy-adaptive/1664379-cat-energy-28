@@ -71,27 +71,28 @@
   grid-column-start: 1;
   grid-column-end: 2;
   height: 302px;
-  background-image: url("../img/hiro-block-background-@1.jpg");
+  background-image: url("../img/hiro-block-background-@1.webp");
   background-size: max(580px, 100%);
   background-position: 63% 51%;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hiro-block-background-@2.jpg");
+    background-image: url("../img/hiro-block-background-@2.webp");
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
     height: auto;
     background-position: 0 0;
-    background-size: cover;
+    background-size: 1050px;
   }
 }
 

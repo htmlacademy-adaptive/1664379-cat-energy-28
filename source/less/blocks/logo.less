@@ -1,19 +1,11 @@
-.logo__img {
-  display: block;
-  width: 33px;
-  height: 37px;
-  background-image: url("../img/logo-mobile.svg");
-}
-
 .logo__title {
-  display: block;
-  width: 101px;
-  height: 19px;
+  margin-left: auto;
+  margin-right: auto;
   flex-grow: 1;
-  background-image: url("../img/logo-2-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 101px 19px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .logo__title:hover,
@@ -24,32 +16,4 @@
 .logo__title:active,
 .logo__img:active {
   opacity: 60%;
-}
-
-.logo__title--catalog {
-  margin-left: -7px;
-}
-
-@media (min-width: @tablet-width) {
-  .logo__img {
-    width: 174px;
-    height: 52px;
-    background-image: url("../img/logo-tablet.svg");
-  }
-
-  .logo__title {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .logo__img {
-    width: 202px;
-    height: 59px;
-    background-image: url("../img/logo-desktop.svg");
-  }
-
-  .logo__title {
-    display: none;
-  }
 }

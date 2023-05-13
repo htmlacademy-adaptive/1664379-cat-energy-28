@@ -5,6 +5,7 @@
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 12px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -65,7 +66,7 @@
   padding-top: 14px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 19px;
+    padding-top: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -102,6 +103,10 @@
 
 .questionnaire__field:focus {
   outline: 1px solid @special-dark-grey;
+}
+/* класс для проверки ошибки вместо псевдо-элемента invalid*/
+.questionnaire__field--invalid {
+  outline: 1px solid @error;
 }
 
 .questionnaire__field::placeholder {

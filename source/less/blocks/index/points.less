@@ -62,7 +62,7 @@
   }
 }
 
-.points__icon {
+.points__icon-background {
   position: relative;
   width: 50px;
   height: 50px;
@@ -149,6 +149,7 @@
 
 .points__catalog {
   position: relative;
+  display: flex;
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: 16px;
@@ -195,18 +196,24 @@
 }
 
 .points__catalog::after {
-  content: url("../img/icons/point-catalog-arrow.svg");
-  width: 33px;
+  content: "";
+  display: block;
+  position: relative;
+  width: 32px;
   height: 10px;
-  padding-left: 15px;
+  top: 2px;
+  left: 10px;
+  mask: url("../img/icons/stek.svg#point-catalog-arrow");
+  background-color: #000000;
 
   @media (min-width: @tablet-width) {
     padding-left: 27px;
+    top: 9px;
   }
 }
 
 .points__catalog:hover::after {
-  content: url("../img/icons/point-catalog-arrow-hover.svg");
+  mask: url("../img/icons/stek.svg#point-catalog-arrow-hover");
 }
 
 .points__catalog:active {
@@ -224,15 +231,16 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  min-height: 135px;
+  min-height: 108px;
   overflow: hidden;
   padding-top: 22px;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    min-height: 135px;
     font-size: 16px;
     line-height: 24px;
     padding-top: 0;
@@ -241,5 +249,7 @@
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 27px;
+    min-height: 100px;
   }
 }

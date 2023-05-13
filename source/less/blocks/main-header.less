@@ -22,14 +22,14 @@
     height: 112px;
     padding: 0;
     margin: auto;
+    padding-top: 5px;
   }
 }
 
 .main-header__logo {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 33px 1fr;
   height: 65px;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +38,9 @@
   padding-right: 44px;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     max-width: 174px;
     border-bottom: none;
     height: 52px;

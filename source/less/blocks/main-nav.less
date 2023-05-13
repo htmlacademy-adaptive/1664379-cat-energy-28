@@ -9,6 +9,10 @@
 }
 
 /*СТИЛИ СПИСКА МЕНЮ ПО УМОЛЧАНИЮ*/
+.main-nav__list.main-nav__list--nojs {
+  position: static;
+}
+
 .main-nav__list.main-nav__list--js {
   position: absolute;
 
@@ -19,7 +23,7 @@
 
 .main-nav__list,
 .main-nav__list.main-nav__list--nojs {
-  position: static;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,6 +113,7 @@
 .main-nav__item:active {
   opacity: 30%;
 }
+
 /*JS*/
 
 /*ОБЕРТКА КНОПОК*/
@@ -116,8 +121,8 @@
 .main-nav__toggle {
   position: absolute;
   top: -41px;
-  right: 20px;
-  display: flex;
+  left: calc(100% - 40px);
+  display: block;
   align-items: center;
   padding: 0;
   width: 23px;
@@ -135,13 +140,43 @@
 }
 
 .main-nav__toggle--open {
-  display: block;
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    mask: url("../img/icons/stek.svg#open-menu");
+    background-color: #000000;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-nav__toggle--open:hover {
+  &::after {
+    opacity: 60%;
+  }
+}
+
+.main-nav__toggle--open:active {
+  &::after {
+    opacity: 30%;
+  }
+}
+
+.main-nav__toggle--close:hover {
+  &::after {
+    opacity: 60%;
+  }
+}
+
+.main-nav__toggle--close:active {
+  &::after {
+    opacity: 30%;
+  }
+}
 /* КНОПКА ЗАКРЫТЬ*/
 
 .main-nav__toggle--close.main-nav__toggle--nojs {
@@ -154,4 +189,13 @@
 
 .main-nav__toggle--close {
   display: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    mask: url("../img/icons/stek.svg#close-menu");
+    background-color: #000000;
+  }
 }
