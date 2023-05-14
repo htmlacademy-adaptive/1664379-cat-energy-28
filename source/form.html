@@ -11,6 +11,8 @@
   <link rel="icon" href="img/favicons/icon-32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/source/fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/source/fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page__body">
@@ -18,18 +20,8 @@
   <header class="main-header">
 
     <div class="main-header__logo logo">
-
-      <a class="logo__img link" href="index.html" aria-label="главная страница магазина">
-        <picture>
-          <source media="(min-width: 1240px)" width="202" height="59" srcset="img/logo/logo-desktop.svg">
-          <source media="(min-width: 769px)" width="174" height="52" srcset="img/logo/logo-tablet.svg">
-          <img class="img" width="33" height="38" src="img/logo/logo-mobile.svg" alt="главная страницы магазина">
-        </picture>
-      </a>
-      <a class="logo__title link"  href="index.html" aria-label="главная страница магазина">
-        <img class="img" width="101" height="18" src="img/logo/logo-title.svg" alt="главная страницы магазина">
-      </a>
-
+      <a class="logo__img link" href="index.html" aria-label="главная страница магазина"></a>
+      <a class="logo__title link" href="index.html" aria-label="главная страница магазина"></a>
     </div>
 
     <nav class="main-header__nav main-nav">
@@ -43,19 +35,15 @@
       </button>
 
       <ul class="main-nav__list main-nav__list--nojs">
-
         <li class="main-nav__item">
           <a class="link" href="index.html">Главная</a>
         </li>
-
         <li class="main-nav__item">
           <a class="link" href="catalog.html">Каталог продукции</a>
         </li>
-
         <li class="main-nav__item main-nav__item--active">
           <a class="link" href="#">Подбор программы</a>
         </li>
-
       </ul>
 
     </nav>
@@ -73,22 +61,18 @@
         </legend>
 
         <ul class="questionnaire__list">
-
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="name">Имя:*</label>
             <input class="questionnaire__field questionnaire__field--invalid" type="text" name="name" id="name" placeholder="Барсик" required>
           </li>
-
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="weight">Вес (кг):*</label>
             <input class="questionnaire__field" type="number" name="weight" id="weight" placeholder="7" required>
           </li>
-
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="ages">Возраст (лет):</label>
             <input class="questionnaire__field" type="number" name="ages" id="ages" placeholder="7">
           </li>
-
         </ul>
 
       </fieldset>
@@ -97,7 +81,6 @@
         <legend class="program-options__legend visually-hidden">Выбор цели</legend>
 
         <ul class="program-options__list">
-
           <li class="program-options__item">
             <label class="program-options__control">
               <input class="program-options__input visually-hidden" type="radio" name="program" value="lose-weight"
@@ -106,7 +89,6 @@
               <span class="program-options__title">Похудение</span>
             </label>
           </li>
-
           <li class="program-options__item">
             <label class="program-options__control">
               <input class="program-options__input visually-hidden" type="radio" name="program" value="gain-weight">
@@ -114,7 +96,6 @@
               <span class="program-options__title">Набор массы</span>
             </label>
           </li>
-
           <li class="program-options__item">
             <label class="program-options__control">
               <input class="program-options__input visually-hidden" type="radio" name="program" value="need-advice">
@@ -122,7 +103,6 @@
               <span class="program-options__title">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
-
         </ul>
 
       </fieldset>
@@ -133,17 +113,14 @@
             class="br-mobile"> <span class="not-wrap-text">(владельца кота)</span></legend>
 
         <ul class="client-contacts__list">
-
           <li class="client-contacts__item client-contacts__item--email">
             <label class="client-contacts__label" for="email">E-mail:*</label>
             <input class="client-contacts__field" type="email" placeholder="kuklachev@gmail.com" name="email" id="email" required>
           </li>
-
           <li class="client-contacts__item client-contacts__item--phone">
             <label class="client-contacts__label" for="phone">Телефон:*</label>
             <input class="client-contacts__field" type="tel" placeholder="8 (960) 900-60-90" name="phone" id="phone" required>
           </li>
-
         </ul>
 
       </fieldset>
@@ -163,7 +140,6 @@
         <legend class="product-choice__legend">Дополнительно</legend>
 
         <ul class="product-choice__list">
-
           <li class="product-choice__item">
             <label class="product-choice__control">
               <input class="product-choice__input visually-hidden" type="checkbox" name="sweetener" id="sweetener"
@@ -172,7 +148,6 @@
               <span class="product-choice__title">Сахорозаменитель</span>
             </label>
           </li>
-
           <li class="product-choice__item">
             <label class="product-choice__control">
               <input class="product-choice__input visually-hidden" type="checkbox" name="water" id="water">
@@ -180,7 +155,6 @@
               <span class="product-choice__title">Питьевая вода</span>
             </label>
           </li>
-
           <li class="product-choice__item">
             <label class="product-choice__control">
               <input class="product-choice__input visually-hidden" type="checkbox" name="milk" id="milk">
@@ -188,7 +162,6 @@
               <span class="product-choice__title">Молоко</span>
             </label>
           </li>
-
           <li class="product-choice__item">
             <label class="product-choice__control">
               <input class="product-choice__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
@@ -196,7 +169,6 @@
               <span class="product-choice__title">Витамины</span>
             </label>
           </li>
-
         </ul>
 
       </fieldset>
@@ -239,28 +211,20 @@
 
     <div class="footer__nav footer-nav">
 
-      <a class="link" href="index.html" aria-label="на главную страницу">
-        <svg class="footer-nav__logo" width="128" height="24">
-          <use xlink:href="img/sprite.svg#footer-logo"></use>
-        </svg>
-      </a>
+      <a class="footer-nav__logo link" href="index.html" aria-label="на главную страницу"></a>
 
       <h3 class="visually-hidden">Список социальных сетей</h3>
 
       <ul class="footer-nav__social social-list">
-
         <li class="social-list__item">
           <a class="social-list__item-vk link" href="blank.html" aria-label="страница магазина в vk"></a>
         </li>
-
         <li class="social-list__item">
           <a class="social-list__youtube link" href="blank.html" aria-label="канал магазина на youtube"></a>
         </li>
-
         <li class="social-list__item">
           <a class="social-list__telegram link" href="blank.html" aria-label="чат магазина в telegram"></a>
         </li>
-
       </ul>
 
       <a class="footer-nav__htmlacademy link" href="https://htmlacademy.ru/intensive/adaptive"

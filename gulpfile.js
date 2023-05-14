@@ -59,35 +59,43 @@ const copyImages = () => {
 
 // WebP
 
-const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+const createWebpIndex = () => {
+  return gulp.src('source/img/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
   }))
   .pipe(gulp.dest('build/img'));
 }
 
-//Svg
-const makeSvgo = () => {
-  return gulp.src('source/img/*svg', '!source/img/icon/*svg', '!source/img/logo/*svg')
-  .pipe(svgo());
+const createWebpCatalog = () => {
+  return gulp.src('source/img/catalog/*.{jpg,png}')
+  .pipe(squoosh({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img/catalog'));
 }
 
-const makeSvgoLogo = () => {
-  return gulp.src('source/img/logo/*svg')
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img/logo'));
+//Svg
+function makeSvgo() {
+  return gulp.src('source/img/*svg', '!source/img/icon/*svg', '!source/img/logo/*svg')
+    .pipe(svgo());
 }
-//Stek
+
+//stak
 const { src, dest } = gulp
 
 function makeStack () {
-	return src(`source/img/icons/*.svg`)
+	return src('source/img/icons/*.svg')
     .pipe(svgo())
-		.pipe(stacksvg({ output: `stek` }))
-		.pipe(dest(`build/img/icons`));
+		.pipe(stacksvg({ output: 'stak' }))
+		.pipe(dest('build/img/icons'));
 }
-
+function makeStackLogo () {
+	return src('source/img/logo/*.svg')
+    .pipe(svgo())
+		.pipe(stacksvg({ output: 'stak' }))
+		.pipe(dest('build/img/logo'));
+}
 //Sprite
 const makeSprite = () => {
   return gulp.src('source/img/*svg')
@@ -157,10 +165,11 @@ export const build = gulp.series(
     html,
     scripts,
     makeSvgo,
-    makeSvgoLogo,
+    makeStackLogo,
     makeSprite,
     makeStack,
-    createWebp
+    createWebpIndex,
+    createWebpCatalog
   ),
 );
 
@@ -175,10 +184,11 @@ export default gulp.series(
     html,
     scripts,
     makeSvgo,
-    makeSvgoLogo,
+    makeStackLogo,
     makeSprite,
     makeStack,
-    createWebp
+    createWebpIndex,
+    createWebpCatalog
   ),
   gulp.series(
     server,

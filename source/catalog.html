@@ -11,6 +11,8 @@
   <link rel="icon" href="img/favicons/icon-32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="/source/fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/source/fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page__body">
@@ -18,18 +20,8 @@
   <header class="main-header">
 
     <div class="main-header__logo logo">
-
-      <a class="logo__img link" href="index.html" aria-label="главная страница магазина">
-        <picture>
-          <source media="(min-width: 1240px)" width="202" height="59" srcset="img/logo/logo-desktop.svg">
-          <source media="(min-width: 769px)" width="174" height="52" srcset="img/logo/logo-tablet.svg">
-          <img class="img" width="33" height="38" src="img/logo/logo-mobile.svg" alt="главная страницы магазина">
-        </picture>
-      </a>
-      <a class="logo__title link"  href="index.html" aria-label="главная страница магазина">
-        <img class="img" width="101" height="18" src="img/logo/logo-title.svg" alt="главная страницы магазина">
-      </a>
-
+      <a class="logo__img link" href="index.html" aria-label="главная страница магазина"></a>
+      <a class="logo__title link" href="index.html" aria-label="главная страница магазина"></a>
     </div>
 
     <nav class="main-header__nav main-nav">
@@ -43,21 +35,16 @@
       </button>
 
       <ul class="main-nav__list main-nav__list--nojs">
-
         <li class="main-nav__item">
           <a class="link" href="index.html">Главная</a>
         </li>
-
         <li class="main-nav__item main-nav__item--active">
           <a class="link" href="#">Каталог продукции</a>
         </li>
-
         <li class="main-nav__item">
           <a class="link" href="form.html">Подбор программы</a>
         </li>
-
       </ul>
-
     </nav>
 
   </header>
@@ -75,14 +62,12 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--small" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)"
               srcset="img/catalog/chicken-500-@1.webp 1x, img/catalog/chicken-500-@2.webp 2x" width="161" height="172">
             <img class="img" width="80" height="86" src="img/catalog/chicken-500-@1.png"
-              srcset="img/catalog/chicken-500-@2.png 2x" alt="маленькая банка с курицей">
+              srcset="img/catalog/chicken-500-@1.webp 1x, img/catalog/chicken-500-@2.webp 2x" alt="маленькая банка с курицей">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -106,7 +91,6 @@
               <td class="product__table-value">700 &#8381;</td>
             </tr>
           </table>
-
         </div>
 
         <a class="product__order-button button link" href="blank.html">Заказать</a>
@@ -118,14 +102,12 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--big" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)"
               srcset="img/catalog/chicken-1000-@1.png 1x, img/catalog/chicken-1000-@2.png 2x" width="168" height="206">
             <img class="img" width="84" height="100" src="img/catalog/chicken-1000-@1.png"
-              srcset="img/catalog/chicken-1000-@2.png 2x" alt="большая банка с курицей">
+              srcset="img/catalog/chicken-1000-@1.webp 1x, img/catalog/chicken-1000-@2.webp 2x" alt="большая банка с курицей">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -149,7 +131,6 @@
               <td class="product__table-value">1000 &#8381;</td>
             </tr>
           </table>
-
         </div>
 
         <a class="product__order-button button link" href="blank.html">Заказать</a>
@@ -161,14 +142,12 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--small" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)" srcset="img/catalog/fish-500-@1.png 1x, img/catalog/fish-500-@2.png 2x"
               width="163" height="172">
             <img class="img" width="68" height="80" src="img/catalog/fish-500-@1.png"
-              srcset="img/catalog/fish-500-@2.png 2x" alt="маленькая банка с рыбой">
+              srcset="img/catalog/fish-500-@1.webp 1x, img/catalog/fish-500-@2.webp 2x" alt="маленькая банка с рыбой">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -204,14 +183,12 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--big" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)" srcset="img/catalog/fish-1000-@1.png 1x, img/catalog/fish-1000-@2.png 2x"
               width="168" height="206">
             <img class="img" width="84" height="100" src="img/catalog/fish-1000-@1.png"
-              srcset="img/catalog/fish-1000-@2.png 2x" alt="большая банка с рыбой">
+              srcset="img/catalog/fish-1000-@1.webp 1x, img/catalog/fish-1000-@2.webp 2x" alt="большая банка с рыбой">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -247,15 +224,13 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--small" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)"
               srcset="img/catalog/buckwheat-500-@1.png 1x, img/catalog/buckwheat-500-@2.png 2x" width="161"
               height="172">
             <img class="img" width="68" height="80" src="img/catalog/buckwheat-500-@1.png"
-              srcset="img/catalog/buckwheat-500-@2.png 2x" alt="маленькая банка с гречкой">
+              srcset="img/catalog/buckwheat-500-@1.webp 1x, img/catalog/buckwheat-500-@2.webp 2x" alt="маленькая банка с гречкой">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -291,15 +266,13 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--big" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)"
               srcset="img/catalog/buckwheat-1000-@1.png 1x, img/catalog/buckwheat-1000-@2.png 2x" width="168"
               height="206">
             <img class="img" width="84" height="100" src="img/catalog/buckwheat-1000-@1.png"
-              srcset="img/catalog/buckwheat-1000-@2.png 2x" alt="большая банка с гречкой">
+              srcset="img/catalog/buckwheat-1000-@1.webp 1x, img/catalog/buckwheat-1000-@2.webp 2x" alt="большая банка с гречкой">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -335,14 +308,12 @@
       <article class="basic-goods__card product">
 
         <a class="product__img product__img--small" href="blank.html">
-
           <picture>
             <source media="(min-width: 769px)" srcset="img/catalog/rice-500-@1.png 1x, img/catalog/rice-500-@2.png 2x"
               width="163" height="172">
             <img class="img" width="80" height="88" src="img/catalog/rice-500-@1.png"
-              srcset="img/catalog/rice-500-@2.png 2x" alt="маленькая банка с рисом">
+              srcset="img/catalog/rice-500-@1.webp 1x, img/catalog/rice-500-@2.webp 2x" alt="маленькая банка с рисом">
           </picture>
-
         </a>
 
         <div class="product__description">
@@ -438,11 +409,10 @@
 
         <picture>
           <source class="additional-goods__gift-img" media="(min-width: 769px) and (max-width: 1240px)"
-            srcset="img/catalog/case-for-cat-tablet.webp" width="700">
-          <img class="additional-goods__gift-img img" height="290" src="img/catalog/case-for-cat.jpg"
+            srcset="img/catalog/case-for-cat-tablet-@1.webp 1x, case-for-cat-tablet-@2.webp 2x" width="700">
+          <img class="additional-goods__gift-img img" height="290" src="img/catalog/case-for-cat-@1.jpg" srcset="img/catalog/case-for-cat-@1.webp 1x, img/catalog/case-for-cat-@2.webp 2x"
             alt="подарочная коробка">
         </picture>
-
 
         <svg class="additional-goods__gift-icon" width="78" height="80">
           <use xlink:href="img/sprite.svg#gift-icon"></use>
@@ -486,11 +456,7 @@
 
     <div class="footer__nav footer-nav">
 
-      <a class="link" href="index.html" aria-label="на главную страницу">
-        <svg class="footer-nav__logo" width="128" height="24">
-          <use xlink:href="img/sprite.svg#footer-logo"></use>
-        </svg>
-      </a>
+      <a class="footer-nav__logo link" href="index.html" aria-label="на главную страницу"></a>
 
       <h3 class="visually-hidden">Список социальных сетей</h3>
 

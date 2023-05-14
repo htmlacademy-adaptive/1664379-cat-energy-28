@@ -36,23 +36,21 @@
   }
 }
 
-@media (max-width: @mobil-width-only) {
-  .description__number {
-    display: none;
-  }
-}
-
 .description__number {
-  font-size: 280px;
-  color: @basic-grey;
-  position: absolute;
-  z-index: -1;
-  top: 92px;
-  right: 90px;
+  display: none;
 
   @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 280px;
+    color: @basic-grey;
+    position: absolute;
+    z-index: -1;
     right: 77px;
     top: 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -2px;
   }
 }
 
@@ -61,6 +59,10 @@
 
   @media (min-width: @tablet-width) {
     right: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 20px;
   }
 }
 
