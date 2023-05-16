@@ -68,26 +68,26 @@ const createWebp = () => {
 }
 
 //Svg
-const makeSvgo = () => {
+function makeSvgo() {
   return gulp.src('source/img/*svg', '!source/img/icon/*svg', '!source/img/logo/*svg')
-  .pipe(svgo());
+    .pipe(svgo());
 }
 
-const makeSvgoLogo = () => {
-  return gulp.src('source/img/logo/*svg')
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img/logo'));
-}
-//Stek
+//stack
 const { src, dest } = gulp
 
 function makeStack () {
-	return src(`source/img/icons/*.svg`)
+	return src('source/img/icons/*.svg')
     .pipe(svgo())
-		.pipe(stacksvg({ output: `stek` }))
-		.pipe(dest(`build/img/icons`));
+		.pipe(stacksvg({ output: 'stack' }))
+		.pipe(dest('build/img/icons'));
 }
-
+function makeStackLogo () {
+	return src('source/img/logo/*.svg')
+    .pipe(svgo())
+		.pipe(stacksvg({ output: 'stack' }))
+		.pipe(dest('build/img/logo'));
+}
 //Sprite
 const makeSprite = () => {
   return gulp.src('source/img/*svg')
@@ -157,10 +157,10 @@ export const build = gulp.series(
     html,
     scripts,
     makeSvgo,
-    makeSvgoLogo,
+    makeStackLogo,
     makeSprite,
     makeStack,
-    createWebp
+    createWebp,
   ),
 );
 
@@ -175,7 +175,7 @@ export default gulp.series(
     html,
     scripts,
     makeSvgo,
-    makeSvgoLogo,
+    makeStackLogo,
     makeSprite,
     makeStack,
     createWebp
