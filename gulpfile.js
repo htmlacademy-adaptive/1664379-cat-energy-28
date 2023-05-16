@@ -73,19 +73,19 @@ function makeSvgo() {
     .pipe(svgo());
 }
 
-//stak
+//stack
 const { src, dest } = gulp
 
 function makeStack () {
 	return src('source/img/icons/*.svg')
     .pipe(svgo())
-		.pipe(stacksvg({ output: 'stak' }))
+		.pipe(stacksvg({ output: 'stack' }))
 		.pipe(dest('build/img/icons'));
 }
 function makeStackLogo () {
 	return src('source/img/logo/*.svg')
     .pipe(svgo())
-		.pipe(stacksvg({ output: 'stak' }))
+		.pipe(stacksvg({ output: 'stack' }))
 		.pipe(dest('build/img/logo'));
 }
 //Sprite
