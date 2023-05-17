@@ -26,12 +26,7 @@
 
     <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"
-        aria-label="Открыть меню.">
-      </button>
-
-      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button"
-        aria-label="Закрыть меню.">
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="кнопка управления меню.">
       </button>
 
       <ul class="main-nav__list main-nav__list--nojs">
@@ -66,7 +61,8 @@
             <source media="(min-width: 769px)"
               srcset="img/catalog/chicken-500-@1.webp 1x, img/catalog/chicken-500-@2.webp 2x" width="161" height="172">
             <img class="img" width="80" height="86" src="img/catalog/chicken-500-@1.png"
-              srcset="img/catalog/chicken-500-@1.webp 1x, img/catalog/chicken-500-@2.webp 2x" alt="маленькая банка с курицей">
+              srcset="img/catalog/chicken-500-@1.webp 1x, img/catalog/chicken-500-@2.webp 2x"
+              alt="маленькая банка с курицей">
           </picture>
         </a>
 
@@ -106,7 +102,8 @@
             <source media="(min-width: 769px)"
               srcset="img/catalog/chicken-1000-@1.png 1x, img/catalog/chicken-1000-@2.png 2x" width="168" height="206">
             <img class="img" width="84" height="100" src="img/catalog/chicken-1000-@1.png"
-              srcset="img/catalog/chicken-1000-@1.webp 1x, img/catalog/chicken-1000-@2.webp 2x" alt="большая банка с курицей">
+              srcset="img/catalog/chicken-1000-@1.webp 1x, img/catalog/chicken-1000-@2.webp 2x"
+              alt="большая банка с курицей">
           </picture>
         </a>
 
@@ -229,7 +226,8 @@
               srcset="img/catalog/buckwheat-500-@1.png 1x, img/catalog/buckwheat-500-@2.png 2x" width="161"
               height="172">
             <img class="img" width="68" height="80" src="img/catalog/buckwheat-500-@1.png"
-              srcset="img/catalog/buckwheat-500-@1.webp 1x, img/catalog/buckwheat-500-@2.webp 2x" alt="маленькая банка с гречкой">
+              srcset="img/catalog/buckwheat-500-@1.webp 1x, img/catalog/buckwheat-500-@2.webp 2x"
+              alt="маленькая банка с гречкой">
           </picture>
         </a>
 
@@ -271,7 +269,8 @@
               srcset="img/catalog/buckwheat-1000-@1.png 1x, img/catalog/buckwheat-1000-@2.png 2x" width="168"
               height="206">
             <img class="img" width="84" height="100" src="img/catalog/buckwheat-1000-@1.png"
-              srcset="img/catalog/buckwheat-1000-@1.webp 1x, img/catalog/buckwheat-1000-@2.webp 2x" alt="большая банка с гречкой">
+              srcset="img/catalog/buckwheat-1000-@1.webp 1x, img/catalog/buckwheat-1000-@2.webp 2x"
+              alt="большая банка с гречкой">
           </picture>
         </a>
 
@@ -349,7 +348,7 @@
         <h3 class="visually-hidden">Показать еще товары</h3>
 
         <svg class="product__icon" width="30" height="30">
-          <use xlink:href="#add-product"></use>
+          <use xlink:href="img/sprite.svg#add-product"></use>
         </svg>
 
         <div class="product__title product__title--add">Показать еще 100500 товаров</div>
@@ -397,7 +396,7 @@
         <article class="additional-goods__card additional-product">
 
           <h3 class="additional-product__title">Витамины</h3>
-          <div class="additional-product__parameter">1 упаковка (300 г)</div>
+          <div class="additional-product__parameter">1 упаковка (30 г)</div>
           <div class="additional-product__price">300 &#8381;</div>
           <a class="additional-product__button button link" href="blank.html">Заказать</a>
 
@@ -409,9 +408,9 @@
 
         <picture>
           <source class="additional-goods__gift-img" media="(min-width: 769px) and (max-width: 1240px)"
-            srcset="img/catalog/case-for-cat-tablet-@1.webp 1x, case-for-cat-tablet-@2.webp 2x" width="700">
-          <img class="additional-goods__gift-img img" height="290" src="img/catalog/case-for-cat-@1.jpg" srcset="img/catalog/case-for-cat-@1.webp 1x, img/catalog/case-for-cat-@2.webp 2x"
-            alt="подарочная коробка">
+            srcset="img/catalog/case-for-cat-tablet-@1.webp 1x, img/catalog/case-for-cat-tablet-@2.webp 2x" width="700">
+          <img class="additional-goods__gift-img img" height="290" src="img/catalog/case-for-cat-@1.jpg"
+            srcset="img/catalog/case-for-cat-@1.webp 1x, img/catalog/case-for-cat-@2.webp 2x" alt="подарочная коробка">
         </picture>
 
         <svg class="additional-goods__gift-icon" width="78" height="80">
@@ -449,6 +448,17 @@
         width="320" height="400" style="border: 0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+
+      <noscript>
+        <picture>
+          <source class="footer__location img" media="(min-width: 1240px)"
+            srcset="img/location-desktop-@1.webp 1x, img/location-desktop-@2.webp 2x" width="1240" height="400">
+          <source class="footer__location img" media="(min-width: 769px)"
+            srcset="img/location-tablet-@1.webp 1x, img/location-tablet-@2.webp 2x" width="769" height="400">
+          <img class="footer__location img" height="400" width="320" src="img/location-mobile-@1.jpg"
+            srcset="img/location-mobile-@1.webp 1x, img/location-mobile-@2.webp 2x" alt="адрес на карте">
+        </picture>
+      </noscript>
 
       <img class="map__pointer" width="57" height="53" src="img/map-pointer.png" alt="">
 

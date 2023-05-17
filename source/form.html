@@ -26,12 +26,7 @@
 
     <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"
-        aria-label="Открыть меню.">
-      </button>
-
-      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button"
-        aria-label="Закрыть меню.">
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="кнопка управления меню.">
       </button>
 
       <ul class="main-nav__list main-nav__list--nojs">
@@ -63,7 +58,8 @@
         <ul class="questionnaire__list">
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="name">Имя:*</label>
-            <input class="questionnaire__field questionnaire__field--invalid" type="text" name="name" id="name" placeholder="Барсик" required>
+            <input class="questionnaire__field questionnaire__field--invalid" type="text" name="name" id="name"
+              placeholder="Барсик" required>
           </li>
           <li class="questionnaire__item">
             <label class="questionnaire__label" for="weight">Вес (кг):*</label>
@@ -103,6 +99,7 @@
               <span class="program-options__title">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
+
         </ul>
 
       </fieldset>
@@ -115,11 +112,13 @@
         <ul class="client-contacts__list">
           <li class="client-contacts__item client-contacts__item--email">
             <label class="client-contacts__label" for="email">E-mail:*</label>
-            <input class="client-contacts__field" type="email" placeholder="kuklachev@gmail.com" name="email" id="email" required>
+            <input class="client-contacts__field" type="email" placeholder="kuklachev@gmail.com" name="email" id="email"
+              required>
           </li>
           <li class="client-contacts__item client-contacts__item--phone">
             <label class="client-contacts__label" for="phone">Телефон:*</label>
-            <input class="client-contacts__field" type="tel" placeholder="8 (960) 900-60-90" name="phone" id="phone" required>
+            <input class="client-contacts__field" type="tel" placeholder="8 (960) 900-60-90" name="phone" id="phone"
+              required>
           </li>
         </ul>
 
@@ -173,7 +172,7 @@
 
       </fieldset>
 
-      <button class="main-form__submit button" type="submit">Отправить форму</button>
+      <button class="main-form__submit button" type="submit">Отправить заявку</button>
 
       <div class="main-form__required-fields">* — Обязательные поля</div>
 
@@ -204,6 +203,17 @@
         width="320" height="400" style="border: 0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+
+      <noscript>
+        <picture>
+          <source class="footer__location img" media="(min-width: 1240px)"
+            srcset="img/location-desktop-@1.webp 1x, img/location-desktop-@2.webp 2x" width="1240" height="400">
+          <source class="footer__location img" media="(min-width: 769px)"
+            srcset="img/location-tablet-@1.webp 1x, img/location-tablet-@2.webp 2x" width="769" height="400">
+          <img class="footer__location img" height="400" width="320" src="img/location-mobile-@1.jpg"
+            srcset="img/location-mobile-@1.webp 1x, img/location-mobile-@2.webp 2x" alt="адрес на карте">
+        </picture>
+      </noscript>
 
       <img class="map__pointer" width="57" height="53" src="img/map-pointer.png" alt="">
 

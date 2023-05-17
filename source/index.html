@@ -26,12 +26,7 @@
 
     <nav class="main-header__nav main-nav">
 
-      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button"
-        aria-label="Открыть меню.">
-      </button>
-
-      <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--nojs" type="button"
-        aria-label="Закрыть меню.">
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="кнопка управления меню.">
       </button>
 
       <ul class="main-nav__list main-nav__list--nojs main-nav__list--index">
@@ -59,9 +54,9 @@
       <div class="hiro-block__background-holder"></div>
 
       <div class="hiro-block__content">
-        <h2 class="hiro-block-title">Функциональное <br>питание <span class="not-wrap-text">для
+        <h2 class="hiro-block__title">Функциональное <br>питание <span class="not-wrap-text">для
             котов</span></h2>
-        <span class="hiro-block-text">Занялся собой? Займись котом!</span>
+        <span class="hiro-block__text">Занялся собой? Займись котом!</span>
       </div>
       <div class="hiro-block__product-img-holder">
         <picture>
@@ -74,7 +69,7 @@
         </picture>
       </div>
 
-      <a class="hiro-block-button button link" href="form.html">Подобрать программу</a>
+      <a class="hiro-block__button button link" href="form.html">Подобрать программу</a>
 
     </section>
 
@@ -264,6 +259,17 @@
         width="320" height="400" style="border: 0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+
+      <noscript>
+        <picture>
+          <source class="footer__location img" media="(min-width: 1240px)"
+            srcset="img/location-desktop-@1.webp 1x, img/location-desktop-@2.webp 2x" width="1240" height="400">
+          <source class="footer__location img" media="(min-width: 769px)"
+            srcset="img/location-tablet-@1.webp 1x, img/location-tablet-@2.webp 2x" width="769" height="400">
+          <img class="footer__location img" height="400" width="320" src="img/location-mobile-@1.jpg"
+            srcset="img/location-mobile-@1.webp 1x, img/location-mobile-@2.webp 2x" alt="адрес на карте">
+        </picture>
+      </noscript>
 
       <img class="map__pointer" width="57" height="53" src="img/map-pointer.png" alt="">
 
