@@ -40,13 +40,13 @@
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-template-columns: 1fr 200px;
-    grid-template-rows: 60px 1fr 67px;
+    grid-template-rows: min-content 1fr min-content;
     column-gap: 54px;
     align-items: start;
     padding-left: 52px;
     padding-right: 62px;
     padding-top: 77px;
-    padding-bottom: 36px;
+    padding-bottom: 56px;
     margin-bottom: 24px;
   }
 
@@ -133,6 +133,7 @@
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     font-size: 36px;
     line-height: 36px;
+    padding-bottom: 24px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -161,7 +162,7 @@
     grid-row-end: 4;
     font-size: 20px;
     line-height: 30px;
-    padding-top: 14px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
