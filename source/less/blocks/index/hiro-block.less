@@ -18,7 +18,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50vw 50vw;
     margin-top: -112px;
     height: 696px;
     max-width: 100%;
@@ -26,7 +26,7 @@
   }
 }
 
-.hiro-block-title {
+.hiro-block__title {
   text-align: center;
   font-size: 36px;
   line-height: 36px;
@@ -38,7 +38,6 @@
     font-size: 60px;
     line-height: 60px;
     color: #000000;
-    width: max-content;
     text-align: start;
     margin-bottom: 0;
   }
@@ -48,7 +47,7 @@
   }
 }
 
-.hiro-block-text {
+.hiro-block__text {
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -127,13 +126,12 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     align-items: start;
-    height: 230px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
-    height: 225px;
     padding-top: 231px;
     padding-left: calc(100% - 530px);
     z-index: 2;
@@ -176,7 +174,7 @@
   }
 }
 
-.hiro-block-button {
+.hiro-block__button {
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 1;
